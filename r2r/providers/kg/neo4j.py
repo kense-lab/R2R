@@ -357,12 +357,28 @@ class Neo4jKGProvider(PropertyGraphStore, KGProvider):
 
         self.structured_query(
             """
-            UNWIND $data AS row
-            MERGE (source {id: row.source_id})
-            MERGE (target {id: row.target_id})
-            WITH source, target, row
-            CALL apoc.merge.relationship(source, row.label, {}, row.properties, target) YIELD rel
-            RETURN count(*)
+                UNWIND $data AS row
+                MERGE (source {id: row.source_id})
+                MERGE (target {id: row.target_id})
+                WITH source, target, row
+                CALL {
+                    WITH source, target, row
+                    OPTIONAL MATCH (source)-[existing]->(target)
+                    WHERE type(existing) = row.label
+                    WITH source, target, row, existing,
+                        CASE 
+                            WHEN existing IS NULL THEN row.properties
+                            ELSE apoc.map.merge(existing, apoc.map.merge(row.properties, {
+                                fragment_id: apoc.coll.union(
+                                    coalesce(existing.fragment_id, []),
+                                    coalesce(row.properties.fragment_id, [])
+                                )
+                            }))
+                        END AS mergedProperties
+                    CALL apoc.merge.relationship(source, row.label, {}, mergedProperties, target) YIELD rel
+                    RETURN rel
+                }
+                RETURN count(*)            
             """,
             param_map={"data": params},
         )
@@ -455,25 +471,45 @@ class Neo4jKGProvider(PropertyGraphStore, KGProvider):
             cypher_statement += " AND ".join(prop_list)
 
         return_statement = f"""
-        WITH e
-        CALL {{
             WITH e
-            MATCH (e)-[r{':`' + '`|`'.join(relation_names) + '`' if relation_names else ''}]->(t)
-            RETURN e.name AS source_id, [l in labels(e) WHERE l <> '__Entity__' | l][0] AS source_type,
-                   e{{.* , embedding: Null, name: Null}} AS source_properties,
-                   type(r) AS type,
-                   t.name AS target_id, [l in labels(t) WHERE l <> '__Entity__' | l][0] AS target_type,
-                   t{{.* , embedding: Null, name: Null}} AS target_properties
-            UNION ALL
-            WITH e
-            MATCH (e)<-[r{':`' + '`|`'.join(relation_names) + '`' if relation_names else ''}]-(t)
-            RETURN t.name AS source_id, [l in labels(t) WHERE l <> '__Entity__' | l][0] AS source_type,
-                   e{{.* , embedding: Null, name: Null}} AS source_properties,
-                   type(r) AS type,
-                   e.name AS target_id, [l in labels(e) WHERE l <> '__Entity__' | l][0] AS target_type,
-                   t{{.* , embedding: Null, name: Null}} AS target_properties
-        }}
-        RETURN source_id, source_type, type, target_id, target_type, source_properties, target_properties"""
+            CALL {{
+                WITH e
+                MATCH (e)-[r{{`:`+ '`|`'.join(relation_names) + '`' if relation_names else ''}}]->(t)
+                WITH e, r, t, 
+                    [l in labels(e) WHERE l <> '__Entity__'][0] AS source_label,
+                    [l in labels(t) WHERE l <> '__Entity__'][0] AS target_label
+                RETURN e.name AS source_id, 
+                    source_label AS source_type,
+                    e{{.*, embedding: Null, name: Null}} AS source_properties,
+                    apoc.map.removeKeys(apoc.node.labels(e, source_label)[0], ['__type__']) AS source_label_properties,
+                    type(r) AS type,
+                    properties(r) AS relationship_properties,
+                    t.name AS target_id, 
+                    target_label AS target_type,
+                    t{{.*, embedding: Null, name: Null}} AS target_properties,
+                    apoc.map.removeKeys(apoc.node.labels(t, target_label)[0], ['__type__']) AS target_label_properties
+                UNION ALL
+                WITH e
+                MATCH (e)<-[r{{`:`+ '`|`'.join(relation_names) + '`' if relation_names else ''}}]-(t)
+                WITH e, r, t, 
+                    [l in labels(t) WHERE l <> '__Entity__'][0] AS source_label,
+                    [l in labels(e) WHERE l <> '__Entity__'][0] AS target_label
+                RETURN t.name AS source_id, 
+                    source_label AS source_type,
+                    t{{.*, embedding: Null, name: Null}} AS source_properties,
+                    apoc.map.removeKeys(apoc.node.labels(t, source_label)[0], ['__type__']) AS source_label_properties,
+                    type(r) AS type,
+                    properties(r) AS relationship_properties,
+                    e.name AS target_id, 
+                    target_label AS target_type,
+                    e{{.*, embedding: Null, name: Null}} AS target_properties,
+                    apoc.map.removeKeys(apoc.node.labels(e, target_label)[0], ['__type__']) AS target_label_properties
+            }}
+            RETURN source_id, source_type, type, target_id, target_type, 
+                source_properties, target_properties, 
+                source_label_properties, target_label_properties,
+                relationship_properties
+        """
         cypher_statement += return_statement
 
         data = self.structured_query(cypher_statement, param_map=params)
@@ -495,6 +531,7 @@ class Neo4jKGProvider(PropertyGraphStore, KGProvider):
                 source_id=record["source_id"],
                 target_id=record["target_id"],
                 label=record["type"],
+                properties=remove_empty_values(record["relationship_properties"]),
             )
             triples.append([source, rel, target])
         return triples

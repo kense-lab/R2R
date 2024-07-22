@@ -236,3 +236,4 @@ class KGExtraction(BaseModel):
 
     entities: dict[str, Entity]
     triples: list[Triple]
+    fragment_id: uuid.UUID

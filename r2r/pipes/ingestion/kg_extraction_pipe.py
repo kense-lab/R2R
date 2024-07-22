@@ -146,7 +146,8 @@ class KGExtractionPipe(AsyncPipe):
                 triples = extract_triples(llm_payload, entities)
 
                 # Create KG extraction object
-                return KGExtraction(entities=entities, triples=triples)
+                print(fragment.id)
+                return KGExtraction(entities=entities, triples=triples, fragment_id=fragment.id)
             except (
                 ClientError,
                 json.JSONDecodeError,

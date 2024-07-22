@@ -85,6 +85,7 @@ class KGStoragePipe(AsyncPipe):
                             source_id=triple.subject,
                             target_id=triple.object,
                             label=triple.predicate,
+                            properties={"fragment_id": str(extraction.fragment_id)},
                         )
                     )
             self.kg_provider.upsert_nodes(nodes)
