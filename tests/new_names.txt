@@ -1,0 +1,132 @@
+[
+    {
+        "node1": "Tyrion",
+        "node2": "Tyrion Lannister",
+        "new_name": "<Tyrion Lannister>"
+    },
+    {
+        "node1": "Bran Stark",
+        "node2": "Bran",
+        "new_name": "<NAME>"
+    },
+    {
+        "node1": "Bran Stark",
+        "node2": "Brandon Stark",
+        "new_name": "Brandon Stark"
+    },
+    {
+        "node1": "Sansa Stark",
+        "node2": "Sansa",
+        "new_name": "Sansa Stark"
+    },
+    {
+        "node1": "Ned Stark",
+        "node2": "Ned",
+        "new_name": "Ned Stark"
+    },
+    {
+        "node1": "Ned Stark",
+        "node2": "Ned Stark's father",
+        "new_name": "Eddard Stark"
+    },
+    {
+        "node1": "Catelyn",
+        "node2": "Catelyn Tully",
+        "new_name": "Catelyn Tully"
+    },
+    {
+        "node1": "Catelyn",
+        "node2": "Catelyn Stark",
+        "new_name": "<Catelyn Stark>"
+    },
+    {
+        "node1": "Aerys",
+        "node2": "Aerys II Targaryen",
+        "new_name": "Aerys II Targaryen"
+    },
+    {
+        "node1": "Aerys",
+        "node2": "Aerys Targaryen",
+        "new_name": "Aerys Targaryen"
+    },
+    {
+        "node1": "Aerys",
+        "node2": "Brother of Daenerys and son of the murdered King Aerys Targaryen",
+        "new_name": "Viserys Targaryen"
+    },
+    {
+        "node1": "Bran",
+        "node2": "Brandon Stark",
+        "new_name": "Brandon Stark"
+    },
+    {
+        "node1": "Aerys II Targaryen",
+        "node2": "Aerys Targaryen",
+        "new_name": "Aerys II Targaryen"
+    },
+    {
+        "node1": "Cersei Lannister",
+        "node2": "Cersei",
+        "new_name": "Cersei Lannister"
+    },
+    {
+        "node1": "Robert Baratheon",
+        "node2": "Robert",
+        "new_name": "<NAME> Robert Baratheon"
+    },
+    {
+        "node1": "Aerys Targaryen",
+        "node2": "King Aerys Targaryen",
+        "new_name": "King Aerys Targaryen"
+    },
+    {
+        "node1": "Westeros",
+        "node2": "Westeros, the Sunflower Sea",
+        "new_name": "Westeros, the Sunflower Sea"
+    },
+    {
+        "node1": "Viserys",
+        "node2": "Viserys Targaryen",
+        "new_name": "Viserys Targaryen"
+    },
+    {
+        "node1": "Robert's Rebellion",
+        "node2": "Robert's Rebellion with warhammer on Trident River",
+        "new_name": "Robert's Rebellion"
+    },
+    {
+        "node1": "Jaime Lannister",
+        "node2": "Jaime",
+        "new_name": "Jaime Lannister"
+    },
+    {
+        "node1": "Prince Joffrey",
+        "node2": "Prince Joff",
+        "new_name": "Prince Joffrey"
+    },
+    {
+        "node1": "Prince Joffrey",
+        "node2": "Joffrey",
+        "new_name": "Prince Joffrey Baratheon"
+    },
+    {
+        "node1": "Commander Mormont",
+        "node2": "Commander",
+        "new_name": "Commander Mormont"
+    },
+    {
+        "node1": "Sam",
+        "node2": "Samwell Tarly",
+        "new_name": "<FULL_NAME: Samwell Tarly>"
+    },
+    {
+        "node1": "Ser Allister Thorne",
+        "node2": "Allister Thorne",
+        "new_name": "Ser Allister Thorne"
+    },
+    {
+        "node1": "Tywin Lannister",
+        "node2": "Tyrion Lannister",
+        "new_name": "Tywin Lannister"
+    }
+]

@@ -1,0 +1,1298 @@
+Retrieved 228 nodes.
+Found 201 pairs of nodes with similar names.
+
+Comparing 'Tyrion' and 'Tyrion Lannister':
+
+Comparing 'Lannister' and 'House Lannister':
+
+Comparing 'Lannister' and 'Cersei Lannister':
+
+Comparing 'Lannister' and 'Jaime Lannister':
+
+Comparing 'Lannister' and 'Tywin Lannister':
+
+Comparing 'Lannister' and 'House Lannister court':
+
+Comparing 'Lannister' and 'Tyrion Lannister':
+
+Comparing 'Lannister' and 'Lannister name':
+
+Comparing 'Bran Stark' and 'Bran':
+
+Comparing 'Bran Stark' and 'Stark':
+
+Comparing 'Bran Stark' and 'Brandon Stark':
+
+Comparing 'Stark family' and 'Stark':
+
+Comparing 'Sansa Stark' and 'Sansa':
+
+Comparing 'Sansa Stark' and 'Stark':
+
+Comparing 'Ned Stark' and 'Stark':
+
+Comparing 'Ned Stark' and 'Ned':
+
+Comparing 'Ned Stark' and 'heir to Ned Stark':
+
+Comparing 'Ned Stark' and 'Ned Stark's father':
+
+Comparing 'Catelyn' and 'Counselor to Ned, Catelyn, and Robb':
+
+Comparing 'Catelyn' and 'Catelyn Tully':
+
+Comparing 'Catelyn' and 'Catelyn Stark':
+
+Comparing 'Robb' and 'Counselor to Ned, Catelyn, and Robb':
+
+Comparing 'Robb' and 'Robb Stark':
+
+Comparing 'Theon Greyjoy' and 'Theon Greyjoy's birthday':
+
+Comparing 'Starks' and 'Stark':
+
+Comparing 'Starks' and 'The Starks':
+
+Comparing 'Rodrik Cassel' and 'Ser Rodrik Cassel':
+
+Comparing 'Counselor to Ned, Catelyn, and Robb' and 'Ned':
+
+Comparing 'Counselor to Ned, Catelyn, and Robb' and 'Counselor':
+
+Comparing 'Aerys' and 'Aerys II Targaryen':
+
+Comparing 'Aerys' and 'Aerys Targaryen':
+
+Comparing 'Aerys' and 'Brother of Daenerys and son of the murdered King Aerys Targaryen':
+
+Comparing 'Aerys' and 'Aerys II':
+
+Comparing 'Aerys' and 'King Aerys Targaryen':
+
+Comparing 'King's Justice' and 'King':
+
+Comparing 'House Lannister' and 'House Lannister court':
+
+Comparing 'Ser Gregor Cleagne' and 'Gregor':
+
+Comparing 'knight of the court' and 'court':
+
+Comparing 'knight of the court' and 'knight':
+
+Comparing 'The Mountain that Rides' and 'The Mountain':
+
+Comparing 'Bran' and 'Brandon Stark':
+
+Comparing 'Wall' and 'north of the Wall':
+
+Comparing 'Rickon Stark' and 'Stark':
+
+Comparing 'Stark children' and 'Stark':
+
+Comparing 'Stark children' and 'youngest of the Stark children':
+
+Comparing 'Aerys II Targaryen' and 'Targaryen':
+
+Comparing 'Aerys II Targaryen' and 'Aerys Targaryen':
+
+Comparing 'Aerys II Targaryen' and 'Aerys II':
+
+Comparing 'Targaryen' and 'Daenerys Targaryen':
+
+Comparing 'Targaryen' and 'Aerys Targaryen':
+
+Comparing 'Targaryen' and 'Brother of Daenerys and son of the murdered King Aerys Targaryen':
+
+Comparing 'Targaryen' and 'Targaryen family':
+
+Comparing 'Targaryen' and 'Daenerys Stormborn Targaryen':
+
+Comparing 'Targaryen' and 'Cat Targaryen':
+
+Comparing 'Targaryen' and 'Targaryens':
+
+Comparing 'Targaryen' and 'Targaryen clan':
+
+Comparing 'Targaryen' and 'Viserys Targaryen':
+
+Comparing 'Targaryen' and 'Targaryen family members':
+
+Comparing 'Targaryen' and 'Rhaegar Targaryen':
+
+Comparing 'Targaryen' and 'King Aerys Targaryen':
+
+Comparing 'Targaryen' and 'Targaryen loyalist':
+
+Comparing 'Targaryen' and 'Targaryens' chief adviser':
+
+Comparing 'Renly Baratheon' and 'Baratheon':
+
+Comparing 'Robert's royal council' and 'royal council':
+
+Comparing 'Robert's royal council' and 'Robert':
+
+Comparing 'Robert's royal council' and 'Robert's council':
+
+Comparing 'Baratheon' and 'Stannis Baratheon':
+
+Comparing 'Baratheon' and 'Joffrey Baratheon':
+
+Comparing 'Baratheon' and 'Robert Baratheon':
+
+Comparing 'Baratheon' and 'Joff Baratheon':
+
+Comparing 'king' and 'former king':
+
+Comparing 'king' and 'king of Westeros':
+
+Comparing 'Sansa' and 'Sansa's family':
+
+Comparing 'Arya Stark' and 'Stark':
+
+Comparing 'Arya Stark' and 'Arya':
+
+Comparing 'Arya Stark' and 'Ayra Stark':
+
+Comparing 'Stark' and 'Lyanna Stark':
+
+Comparing 'Stark' and 'Brandon Stark':
+
+Comparing 'Stark' and 'Eddard Stark':
+
+Comparing 'Stark' and 'Lady Stark of Winterfell':
+
+Comparing 'Stark' and 'Catelyn Stark':
+
+Comparing 'Stark' and 'Robb Stark':
+
+Comparing 'Stark' and 'eldest Stark son':
+
+Comparing 'Stark' and 'heir to Ned Stark':
+
+Comparing 'Stark' and 'The Starks':
+
+Comparing 'Stark' and 'youngest of the Stark children':
+
+Comparing 'Stark' and 'Stark daughter':
+
+Comparing 'Stark' and 'Ned Stark's father':
+
+Comparing 'Stark' and 'Starkland':
+
+Comparing 'Stark' and 'Bilbo Stark':
+
+Comparing 'Stark' and 'Ayra Stark':
+
+Comparing 'daughter' and 'Stark daughter':
+
+Comparing 'Joffrey Baratheon' and 'Joff Baratheon':
+
+Comparing 'Joffrey Baratheon' and 'Joffrey':
+
+Comparing 'twelve-year-old' and 'ten-year-old':
+
+Comparing 'Ayra' and 'Ayra Stark':
+
+Comparing 'Cersei Lannister' and 'Cersei':
+
+Comparing 'Queen of the realm' and 'realm':
+
+Comparing 'Robert Baratheon' and 'Robert':
+
+Comparing 'realm' and 'richest man in the realm':
+
+Comparing 'Khal Drogo' and 'Khal':
+
+Comparing 'Daenerys Targaryen' and 'Aerys Targaryen':
+
+Comparing 'Daenerys Targaryen' and 'Daenerys':
+
+Comparing 'Aerys Targaryen' and 'Brother of Daenerys and son of the murdered King Aerys Targaryen':
+
+Comparing 'Aerys Targaryen' and 'Viserys Targaryen':
+
+Comparing 'Aerys Targaryen' and 'King Aerys Targaryen':
+
+Comparing 'Westeros' and 'King of Westeros':
+
+Comparing 'Westeros' and 'king of Westeros':
+
+Comparing 'Westeros' and 'Westeros, the Sunflower Sea':
+
+Comparing 'Westeros' and 'West':
+
+Comparing 'King' and 'Beggar King':
+
+Comparing 'King' and 'Brother of Daenerys and son of the murdered King Aerys Targaryen':
+
+Comparing 'King' and 'Hand of the King':
+
+Comparing 'King' and 'King of Westeros':
+
+Comparing 'King' and 'The Mad King':
+
+Comparing 'King' and 'Kingslayer':
+
+Comparing 'King' and 'King's Landing':
+
+Comparing 'King' and 'Lord Commander of the Kingsguard':
+
+Comparing 'King' and 'Kingsguard':
+
+Comparing 'King' and 'Kingdom of Arryn':
+
+Comparing 'King' and 'King Aerys Targaryen':
+
+Comparing 'King' and 'The Beggar King':
+
+Comparing 'King' and 'The Kingslayer':
+
+Comparing 'Beggar King' and 'The Beggar King':
+
+Comparing 'Brother of Daenerys and son of the murdered King Aerys Targaryen' and 'Daenerys':
+
+Comparing 'Brother of Daenerys and son of the murdered King Aerys Targaryen' and 'King Aerys Targaryen':
+
+Comparing 'Dothraki' and 'Dothraki khaleesi':
+
+Comparing 'Dothraki' and 'Dothraki people':
+
+Comparing 'khalasar' and 'Khalasar':
+
+Comparing 'khalasar' and 'khal':
+
+Comparing 'Khal' and 'Khalasar':
+
+Comparing 'Daenerys' and 'Daenerys Stormborn Targaryen':
+
+Comparing 'Viserys' and 'Viserys Targaryen':
+
+Comparing 'Rhaegar' and 'Rhaegar Targaryen':
+
+Comparing 'Robert' and 'Robert's Rebellion':
+
+Comparing 'Robert' and 'Robert's Rebellion with warhammer on Trident River':
+
+Comparing 'Robert' and 'Robert's rebellion':
+
+Comparing 'Robert' and 'Robert's council':
+
+Comparing 'Robert' and 'Brother of Robert':
+
+Comparing 'Robert's Rebellion' and 'Robert's Rebellion with warhammer on Trident River':
+
+Comparing 'Robert's Rebellion' and 'Robert's rebellion':
+
+Comparing 'Trident River' and 'Robert's Rebellion with warhammer on Trident River':
+
+Comparing 'Eyrie' and 'Lord of the Eyrie':
+
+Comparing 'Jon Arryn' and 'Arryn':
+
+Comparing 'Robert's Rebellion with warhammer on Trident River' and 'war':
+
+Comparing 'King of Westeros' and 'king of Westeros':
+
+Comparing 'King of Westeros' and 'West':
+
+Comparing 'Ned' and 'heir to Ned Stark':
+
+Comparing 'Ned' and 'Ned Stark's father':
+
+Comparing 'Red Keep' and 'Red Keep's throne room':
+
+Comparing 'Red Keep' and 'Red Keep's staff':
+
+Comparing 'war' and 'ward':
+
+Comparing 'war' and 'Ser Allister Thorne's resentment towards new recruits':
+
+Comparing 'Jaime Lannister' and 'Jaime':
+
+Comparing 'Prince Joffrey' and 'Prince Joff':
+
+Comparing 'Prince Joffrey' and 'Joffrey':
+
+Comparing 'prince' and 'princess':
+
+Comparing 'Sandor Clegane' and 'Sandor':
+
+Comparing 'Dothraki khaleesi' and 'khal':
+
+Comparing 'Targaryen family' and 'Targaryen family members':
+
+Comparing 'Jon Snow' and 'Jon Snow's mother':
+
+Comparing 'Bronn' and 'Bronn is smart and skilled':
+
+Comparing 'Lysa Arryn' and 'Arryn':
+
+Comparing 'smart and skilled' and 'Bronn is smart and skilled':
+
+Comparing 'Kingslayer' and 'The Kingslayer':
+
+Comparing 'Lord of Winterfell' and 'Winterfell':
+
+Comparing 'Winterfell' and 'Lady Stark of Winterfell':
+
+Comparing 'Winterfell' and 'Winterfels':
+
+Comparing 'Catelyn Tully' and 'Cat Tully':
+
+Comparing 'Catelyn Tully' and 'Catulina Tully':
+
+Comparing 'Daenerys Stormborn Targaryen' and 'Stormborn':
+
+Comparing 'Jeor Mormont' and 'Jorah Mormont':
+
+Comparing 'Commander Mormont' and 'Commander':
+
+Comparing 'Commander' and 'Lord Commander':
+
+Comparing 'Commander' and 'Lord Commander of the Kingsguard':
+
+Comparing 'Lord Commander' and 'Lord Commander of the Kingsguard':
+
+Comparing 'Sam' and 'Samwell Tarly':
+
+Comparing 'Sam' and 'Sam Tarly':
+
+Comparing 'Ser Allister Thorne' and 'Allister Thorne':
+
+Comparing 'Ser Allister Thorne' and 'Ser Allister Thorne's resentment towards new recruits':
+
+Comparing 'Illyrio Mopatis' and 'Illyrio':
+
+Comparing 'court spy' and 'court':
+
+Comparing 'Westerners' and 'Western':
+
+Comparing 'Westerners' and 'West':
+
+Comparing 'king of Westeros' and 'West':
+
+Comparing 'court' and 'House Lannister court':
+
+Comparing 'Jorah Mormont' and 'Ser Jorah Mormont':
+
+Comparing 'Maester Luwin' and 'Luwin':
+
+Comparing 'Targaryens' and 'Targaryens' chief adviser':
+
+Comparing 'master-at-arms' and 'master-at-arms of Casterly Rock':
+
+Comparing 'Tywin Lannister' and 'Tyrion Lannister':
+
+Comparing 'lord of Casterly Rock' and 'Casterly Rock':
+
+Comparing 'master-at-arms of Casterly Rock' and 'Casterly Rock':
+
+Comparing 'Samwell Tarly' and 'Sam Tarly':
+
+Comparing 'Lord Commander of the Kingsguard' and 'Kingsguard':
+
+Comparing 'Viserys Targaryen' and 'King Aerys Targaryen':
+
+Comparing 'Kingdom of Arryn' and 'Arryn':
+
+Comparing 'ward' and 'Ser Allister Thorne's resentment towards new recruits':
+
+Comparing 'Allister Thorne' and 'Ser Allister Thorne's resentment towards new recruits':
+
+Comparing 'Westeros, the Sunflower Sea' and 'West':
+
+Comparing 'Western' and 'West':
+
+Comparing 'Tyrion' and 'Tyrion Lannister':
+
+
+
+
+===================================
+Inptut: 
+    Compare the following two nodes and their neighborhoods:
+
+    Node 1:
+    Node 'Tyrion' has the following neighbors:
+- Bronn (connected by COLLABORATES_WITH)
+- Jaime (connected by PREVENTS)
+- Bronn (connected by SAVES)
+- Stark family (connected by BELONGS_TO)
+
+    Node 2:
+    Node 'Tyrion Lannister' has the following neighbors:
+- Stark family (connected by MEMBER_OF)
+
+    Are these two nodes similar?
+
+    If you are confident that names are almost the same, then ignore neighbourhood completely. Similarity could be measured by the following:
+    - Names are similar in terms of spelling or contain spelling mistakes
+    - names that are shortened or abbreviated versions of each other
+    - names that contain titles
+
+    But if you're not sure, then consider both the names and the neighborhood structures.
+
+    If yes, briefly explain why they are similar and then give what would be full name of the node, given their names are Tyrion and Tyrion Lannister? $$<NAME>$$
+    If no, briefly explain why they are not similar and then give a final output $$NOT_SIMILAR$$.
+    
+++++++++++++++++++++++++++++
+Output: The two nodes, 'Tyrion' and 'Tyrion Lannister,' are indeed similar. 
+
+1. **Name Similarity**: The names are almost the same; 'Tyrion' is a shortened version of 'Tyrion Lannister.' The name 'Tyrion' directly refers to the character, while 'Tyrion Lannister' includes the character's full name, which contains the surname. 
+
+2. **Titles/Abbreviated Versions**: The name 'Tyrion' can be considered an abbreviated version of the full name 'Tyrion Lannister,' indicating that they refer to the same person.
+
+Given that they are similar, the full name of the node can be provided as $$Tyrion Lannister$$.
+MERGING_STATUS_FOR_NODES: Tyrion Tyrion Lannister Tyrion Lannister
+Nodes are similar. Merging with new name: Tyrion Lannister
+
+Comparing 'Lannister' and 'House Lannister':
+
+
+
+
+===================================
+Inptut: 
+    Compare the following two nodes and their neighborhoods:
+
+    Node 1:
+    Node 'Lannister' has the following neighbors:
+- None (connected by None)
+
+    Node 2:
+    Node 'House Lannister' has the following neighbors:
+- Ser Gregor Cleagne (connected by CHILD_OF)
+
+    Are these two nodes similar?
+
+    If you are confident that names are almost the same, then ignore neighbourhood completely. Similarity could be measured by the following:
+    - Names are similar in terms of spelling or contain spelling mistakes
+    - names that are shortened or abbreviated versions of each other
+    - names that contain titles
+
+    But if you're not sure, then consider both the names and the neighborhood structures.
+
+    If yes, briefly explain why they are similar and then give what would be full name of the node, given their names are Lannister and House Lannister? $$<NAME>$$
+    If no, briefly explain why they are not similar and then give a final output $$NOT_SIMILAR$$.
+    
+++++++++++++++++++++++++++++
+Output: The two nodes are not similar. Although the names "Lannister" and "House Lannister" share the same root name, "House Lannister" is a more formal name that indicates a title or family designation, while "Lannister" could refer to the family, an individual, or even a location without the title context. Additionally, Node 1 has no connections, while Node 2 is connected to another character, Ser Gregor Cleague, showing a more developed neighborhood structure.
+
+Thus, the final output is:
+
+$$NOT_SIMILAR$$
+MERGING_STATUS_FOR_NODES: Lannister House Lannister NOT_SIMILAR
+The nodes are not similar.
+
+Comparing 'Lannister' and 'Cersei Lannister':
+
+
+
+
+===================================
+Inptut: 
+    Compare the following two nodes and their neighborhoods:
+
+    Node 1:
+    Node 'Lannister' has the following neighbors:
+- None (connected by None)
+
+    Node 2:
+    Node 'Cersei Lannister' has the following neighbors:
+- Robert Baratheon (connected by MARRIED_TO)
+- Queen of the realm (connected by BELONGS_TO)
+
+    Are these two nodes similar?
+
+    If you are confident that names are almost the same, then ignore neighbourhood completely. Similarity could be measured by the following:
+    - Names are similar in terms of spelling or contain spelling mistakes
+    - names that are shortened or abbreviated versions of each other
+    - names that contain titles
+
+    But if you're not sure, then consider both the names and the neighborhood structures.
+
+    If yes, briefly explain why they are similar and then give what would be full name of the node, given their names are Lannister and Cersei Lannister? $$<NAME>$$
+    If no, briefly explain why they are not similar and then give a final output $$NOT_SIMILAR$$.
+    
+++++++++++++++++++++++++++++
+Output: The two nodes, 'Lannister' and 'Cersei Lannister', are not similar when considering both their names and neighborhoods.
+
+- In terms of names, 'Lannister' is a family name, while 'Cersei Lannister' is a full name that includes a given name (Cersei) and the family name (Lannister). The names are related, but not similar enough to be considered the same.
+
+- Regarding their neighborhoods, Node 1 ('Lannister') has no neighbors, while Node 2 ('Cersei Lannister') has connections to two other nodes (Robert Baratheon and the Queen of the realm). This significantly differentiates the two nodes.
+
+Thus, based on both the naming and the neighborhood structures, they are not similar. Therefore, the final output is $$NOT_SIMILAR$$.
+MERGING_STATUS_FOR_NODES: Lannister Cersei Lannister NOT_SIMILAR
+The nodes are not similar.
+
+Comparing 'Lannister' and 'Jaime Lannister':
+
+
+
+
+===================================
+Inptut: 
+    Compare the following two nodes and their neighborhoods:
+
+    Node 1:
+    Node 'Lannister' has the following neighbors:
+- None (connected by None)
+
+    Node 2:
+    Node 'Jaime Lannister' has the following neighbors:
+- Red Keep's throne room (connected by AFFECTS)
+- Red Keep (connected by AFFECTS)
+- The Mad King (connected by MARRIED_TO)
+- Brandon Stark (connected by AFFECTS)
+- Ned (connected by AFFECTS)
+- war (connected by DEVELOPED)
+- Aerys (connected by PREDECESSOR_OF)
+
+    Are these two nodes similar?
+
+    If you are confident that names are almost the same, then ignore neighbourhood completely. Similarity could be measured by the following:
+    - Names are similar in terms of spelling or contain spelling mistakes
+    - names that are shortened or abbreviated versions of each other
+    - names that contain titles
+
+    But if you're not sure, then consider both the names and the neighborhood structures.
+
+    If yes, briefly explain why they are similar and then give what would be full name of the node, given their names are Lannister and Jaime Lannister? $$<NAME>$$
+    If no, briefly explain why they are not similar and then give a final output $$NOT_SIMILAR$$.
+    
+++++++++++++++++++++++++++++
+Output: The two nodes are not similar. While both names contain the surname "Lannister," Node 1 only refers to "Lannister," which is generic and does not specify an individual, whereas Node 2 specifies "Jaime Lannister," indicating a specific character. Moreover, Node 1 has no neighbors, whereas Node 2 has multiple relationships that provide context about Jaime Lannister's connections and actions, showing a much richer and more complex structure.
+
+Therefore, I conclude that these two nodes are not similar due to their differing specificity and neighborhood complexity.
+
+Final output: $$NOT_SIMILAR$$
+MERGING_STATUS_FOR_NODES: Lannister Jaime Lannister NOT_SIMILAR
+The nodes are not similar.
+
+Comparing 'Lannister' and 'Tywin Lannister':
+
+
+
+
+===================================
+Inptut: 
+    Compare the following two nodes and their neighborhoods:
+
+    Node 1:
+    Node 'Lannister' has the following neighbors:
+- None (connected by None)
+
+    Node 2:
+    Node 'Tywin Lannister' has the following neighbors:
+- Catelyn (connected by PARENT_OF)
+- Casterly Rock (connected by CEO_OF)
+- realm (connected by CEO_OF)
+
+    Are these two nodes similar?
+
+    If you are confident that names are almost the same, then ignore neighbourhood completely. Similarity could be measured by the following:
+    - Names are similar in terms of spelling or contain spelling mistakes
+    - names that are shortened or abbreviated versions of each other
+    - names that contain titles
+
+    But if you're not sure, then consider both the names and the neighborhood structures.
+
+    If yes, briefly explain why they are similar and then give what would be full name of the node, given their names are Lannister and Tywin Lannister? $$<NAME>$$
+    If no, briefly explain why they are not similar and then give a final output $$NOT_SIMILAR$$.
+    
+++++++++++++++++++++++++++++
+Output: The two nodes are not similar for the following reasons:
+
+1. **Name Differences**: While both nodes have the surname "Lannister," they are distinctly different based on their full names. Node 1 is simply referred to as "Lannister," which is a more general term, while Node 2 is specifically "Tywin Lannister." The first node does not provide a first name, making it ambiguous and less distinctive compared to the specific name of Node 2.
+
+2. **Neighborhood Structures**: Node 1 has no neighbors listed, indicating it is isolated or has no connections established in its context. In contrast, Node 2 has multiple neighbors with explicit relationships, indicating a more complex and active network. This further demonstrates a lack of similarity in context. 
+
+Due to these differences both in the naming (full name vs. general surname) and neighborhood structures (connections vs. isolation), the nodes cannot be considered similar.
+
+Final output: $$NOT_SIMILAR$$
+MERGING_STATUS_FOR_NODES: Lannister Tywin Lannister NOT_SIMILAR
+The nodes are not similar.
+
+Comparing 'Lannister' and 'House Lannister court':
+
+
+
+
+===================================
+Inptut: 
+    Compare the following two nodes and their neighborhoods:
+
+    Node 1:
+    Node 'Lannister' has the following neighbors:
+- None (connected by None)
+
+    Node 2:
+    Node 'House Lannister court' has the following neighbors:
+- None (connected by None)
+
+    Are these two nodes similar?
+
+    If you are confident that names are almost the same, then ignore neighbourhood completely. Similarity could be measured by the following:
+    - Names are similar in terms of spelling or contain spelling mistakes
+    - names that are shortened or abbreviated versions of each other
+    - names that contain titles
+
+    But if you're not sure, then consider both the names and the neighborhood structures.
+
+    If yes, briefly explain why they are similar and then give what would be full name of the node, given their names are Lannister and House Lannister court? $$<NAME>$$
+    If no, briefly explain why they are not similar and then give a final output $$NOT_SIMILAR$$.
+    
+++++++++++++++++++++++++++++
+Output: Yes, the two nodes are similar. The names "Lannister" and "House Lannister court" are closely related, with "House Lannister" indicating the family or house to which "Lannister" pertains. The addition of "court" suggests a specific context within which the house operates but does not change the core name significantly. 
+
+Given their names, the full name of the node would be "$$House Lannister$$".
+MERGING_STATUS_FOR_NODES: Lannister House Lannister court House Lannister
+Nodes are similar. Merging with new name: House Lannister
+
+Comparing 'Lannister' and 'Tyrion Lannister':
+
+
+
+
+===================================
+Inptut: 
+    Compare the following two nodes and their neighborhoods:
+
+    Node 1:
+    Node 'Lannister' has the following neighbors:
+- None (connected by None)
+
+    Node 2:
+    Node 'Tyrion Lannister' has the following neighbors:
+- Stark family (connected by MEMBER_OF)
+
+    Are these two nodes similar?
+
+    If you are confident that names are almost the same, then ignore neighbourhood completely. Similarity could be measured by the following:
+    - Names are similar in terms of spelling or contain spelling mistakes
+    - names that are shortened or abbreviated versions of each other
+    - names that contain titles
+
+    But if you're not sure, then consider both the names and the neighborhood structures.
+
+    If yes, briefly explain why they are similar and then give what would be full name of the node, given their names are Lannister and Tyrion Lannister? $$<NAME>$$
+    If no, briefly explain why they are not similar and then give a final output $$NOT_SIMILAR$$.
+    
+++++++++++++++++++++++++++++
+Output: Yes, the two nodes are similar. The names 'Lannister' and 'Tyrion Lannister' both reference characters from the same family in the context of "Game of Thrones," which indicates a strong connection. Although 'Lannister' on its own is a family name, 'Tyrion Lannister' includes both the family name and a personal name. This relationship suggests that both names are related, and 'Tyrion' is a specific member of the Lannister family, consolidating their affiliation.
+
+Given their names, the full name of the node would be Tyrion Lannister. $$Tyrion Lannister$$
+MERGING_STATUS_FOR_NODES: Lannister Tyrion Lannister Tyrion Lannister
+Nodes are similar. Merging with new name: Tyrion Lannister
+
+Comparing 'Lannister' and 'Lannister name':
+
+
+
+
+===================================
+Inptut: 
+    Compare the following two nodes and their neighborhoods:
+
+    Node 1:
+    Node 'Lannister' has the following neighbors:
+- None (connected by None)
+
+    Node 2:
+    Node 'Lannister name' has the following neighbors:
+- None (connected by None)
+
+    Are these two nodes similar?
+
+    If you are confident that names are almost the same, then ignore neighbourhood completely. Similarity could be measured by the following:
+    - Names are similar in terms of spelling or contain spelling mistakes
+    - names that are shortened or abbreviated versions of each other
+    - names that contain titles
+
+    But if you're not sure, then consider both the names and the neighborhood structures.
+
+    If yes, briefly explain why they are similar and then give what would be full name of the node, given their names are Lannister and Lannister name? $$<NAME>$$
+    If no, briefly explain why they are not similar and then give a final output $$NOT_SIMILAR$$.
+    
+++++++++++++++++++++++++++++
+Output: The two nodes, 'Lannister' and 'Lannister name', are quite similar in terms of their names. The first node has the name 'Lannister', which refers to a well-known surname in the context of the "Game of Thrones" series. The second node has the name 'Lannister name', which includes 'Lannister' as part of a longer designation. 
+
+Although the second name ('Lannister name') suggests a more descriptive title, the core part 'Lannister' is the same. There are no significant spelling mistakes, nor are there any abbreviations that would make them distinctly different. Given this reasoning, we can conclude that the two nodes are similar due to their shared name component.
+
+Considering this, the full name of the node could be denoted based on their names as ‘Lannister’. 
+
+So, the output would be:
+$$NAME$$: Lannister
+MERGING_STATUS_FOR_NODES: Lannister Lannister name NAME
+Nodes are similar. Merging with new name: NAME
+
+Comparing 'Bran Stark' and 'Bran':
+
+
+
+
+===================================
+Inptut: 
+    Compare the following two nodes and their neighborhoods:
+
+    Node 1:
+    Node 'Bran Stark' has the following neighbors:
+- Stark family (connected by MEMBER_OF)
+- Stark family (connected by CHILD_OF)
+
+    Node 2:
+    Node 'Bran' has the following neighbors:
+- Starks (connected by IS_EMPLOYED_BY)
+
+    Are these two nodes similar?
+
+    If you are confident that names are almost the same, then ignore neighbourhood completely. Similarity could be measured by the following:
+    - Names are similar in terms of spelling or contain spelling mistakes
+    - names that are shortened or abbreviated versions of each other
+    - names that contain titles
+
+    But if you're not sure, then consider both the names and the neighborhood structures.
+
+    If yes, briefly explain why they are similar and then give what would be full name of the node, given their names are Bran Stark and Bran? $$<NAME>$$
+    If no, briefly explain why they are not similar and then give a final output $$NOT_SIMILAR$$.
+    
+++++++++++++++++++++++++++++
+Output: The two nodes 'Bran Stark' and 'Bran' appear to be similar due to the following reasons:
+1. The names share a common root, "Bran."
+2. 'Bran Stark' is a full name that includes the surname 'Stark,' while 'Bran' can be considered an abbreviation or shortened version of the first name.
+
+However, considering their neighborhoods, the structural connections are quite different. Node 1 connects to the Stark family through relationships indicating membership and family ties, while Node 2 connects 'Bran' to a work context, indicating employment.
+
+Despite the differences in neighborhood structures, the similarity in names suggests they are linked, as 'Bran' is likely a reference to the same character as 'Bran Stark' but in a more abbreviated or casual context.
+
+Given this reasoning, it is reasonable to consider them similar.
+
+Thus, the full name of the node would be $$Bran Stark$$.
+MERGING_STATUS_FOR_NODES: Bran Stark Bran Bran Stark
+Nodes are similar. Merging with new name: Bran Stark
+
+Comparing 'Bran Stark' and 'Stark':
+
+
+
+
+===================================
+Inptut: 
+    Compare the following two nodes and their neighborhoods:
+
+    Node 1:
+    Node 'Bran Stark' has the following neighbors:
+- Stark family (connected by MEMBER_OF)
+- Stark family (connected by CHILD_OF)
+
+    Node 2:
+    Node 'Stark' has the following neighbors:
+- Ayra Stark (connected by CHILD_OF)
+- Sansa (connected by CHILD_OF)
+- Arya Stark (connected by CHILD_OF)
+
+    Are these two nodes similar?
+
+    If you are confident that names are almost the same, then ignore neighbourhood completely. Similarity could be measured by the following:
+    - Names are similar in terms of spelling or contain spelling mistakes
+    - names that are shortened or abbreviated versions of each other
+    - names that contain titles
+
+    But if you're not sure, then consider both the names and the neighborhood structures.
+
+    If yes, briefly explain why they are similar and then give what would be full name of the node, given their names are Bran Stark and Stark? $$<NAME>$$
+    If no, briefly explain why they are not similar and then give a final output $$NOT_SIMILAR$$.
+    
+++++++++++++++++++++++++++++
+Output: The two nodes, "Bran Stark" and "Stark," are not similar. 
+
+Even though their names share a common element, "Stark," "Bran Stark" is a specific character with a full name, while "Stark" serves as a last name or a family name without any specified individual attached to it. The neighborhood structures also differ, as "Bran Stark" is connected to the Stark family through direct familial relationships (member of the family and child of), while "Stark" is connected to individual family members without identifying who they are related to in terms of a single family member.
+
+Thus, there is a clear distinction in specificity and relationships in their respective contexts, leading to the conclusion that the two nodes are $$NOT_SIMILAR$$.
+MERGING_STATUS_FOR_NODES: Bran Stark Stark NOT_SIMILAR
+The nodes are not similar.
+
+Comparing 'Bran Stark' and 'Brandon Stark':
+
+
+
+
+===================================
+Inptut: 
+    Compare the following two nodes and their neighborhoods:
+
+    Node 1:
+    Node 'Bran Stark' has the following neighbors:
+- Stark family (connected by MEMBER_OF)
+- Stark family (connected by CHILD_OF)
+
+    Node 2:
+    Node 'Brandon Stark' has the following neighbors:
+- Jaime Lannister (connected by AFFECTS)
+- Red Keep (connected by LOCATED_IN)
+- Ned (connected by SIBLING_OF)
+
+    Are these two nodes similar?
+
+    If you are confident that names are almost the same, then ignore neighbourhood completely. Similarity could be measured by the following:
+    - Names are similar in terms of spelling or contain spelling mistakes
+    - names that are shortened or abbreviated versions of each other
+    - names that contain titles
+
+    But if you're not sure, then consider both the names and the neighborhood structures.
+
+    If yes, briefly explain why they are similar and then give what would be full name of the node, given their names are Bran Stark and Brandon Stark? $$<NAME>$$
+    If no, briefly explain why they are not similar and then give a final output $$NOT_SIMILAR$$.
+    
+++++++++++++++++++++++++++++
+Output: The two nodes are similar primarily due to the similarity in their names. "Bran Stark" and "Brandon Stark" share the same last name and a common prefix in their first names, with "Bran" being a common diminutive or abbreviation of "Brandon." This suggests that they could be interpreted as different forms of the same name, pointing to a familial or contextual relationship despite the difference in spelling.
+
+However, when considering their neighborhoods, they exhibit distinct connections. Node 1 ('Bran Stark') is linked primarily to the Stark family through family relations, indicating a strong association with that family unit. In contrast, Node 2 ('Brandon Stark') has connections to other external characters and locations (Jaime Lannister, Red Keep, and Ned), showcasing a more varied social network.
+
+Even though their neighborhoods differ, the similarity in the names gives them a basis for comparison.
+
+Given their names are Bran Stark and Brandon Stark, the full name of the node would be:
+
+$$Brandon Stark$$
+MERGING_STATUS_FOR_NODES: Bran Stark Brandon Stark Brandon Stark
+Nodes are similar. Merging with new name: Brandon Stark
+
+Comparing 'Stark family' and 'Stark':
+
+
+
+
+===================================
+Inptut: 
+    Compare the following two nodes and their neighborhoods:
+
+    Node 1:
+    Node 'Stark family' has the following neighbors:
+- Tyrion Lannister (connected by MEMBER_OF)
+- Bran Stark (connected by MEMBER_OF)
+- Rickon Stark (connected by CHILD_OF)
+- Rickon Stark (connected by PART_OF)
+- Jon Snow (connected by MEMBER_OF)
+- Bran Stark (connected by CHILD_OF)
+- Tyrion (connected by BELONGS_TO)
+
+    Node 2:
+    Node 'Stark' has the following neighbors:
+- Ayra Stark (connected by CHILD_OF)
+- Sansa (connected by CHILD_OF)
+- Arya Stark (connected by CHILD_OF)
+
+    Are these two nodes similar?
+
+    If you are confident that names are almost the same, then ignore neighbourhood completely. Similarity could be measured by the following:
+    - Names are similar in terms of spelling or contain spelling mistakes
+    - names that are shortened or abbreviated versions of each other
+    - names that contain titles
+
+    But if you're not sure, then consider both the names and the neighborhood structures.
+
+    If yes, briefly explain why they are similar and then give what would be full name of the node, given their names are Stark family and Stark? $$<NAME>$$
+    If no, briefly explain why they are not similar and then give a final output $$NOT_SIMILAR$$.
+    
+++++++++++++++++++++++++++++
+Output: The two nodes, 'Stark family' and 'Stark', are not similar. While they share the root name "Stark," the context in which they are used differs significantly. 
+
+'Stark family' refers specifically to the family as a whole and includes members and connections that denote relationships and groupings. In contrast, 'Stark' is more general and could refer to any entity or character associated with the Stark name. The neighborhood structures reflect this: Node 1 has a diverse set of connections representing familial and group memberships, while Node 2 has only children of the Stark, which could signify a single generation.
+
+Given the differences in context and neighborhood, I conclude that the two nodes are not similar.
+
+Final output: $$NOT_SIMILAR$$
+MERGING_STATUS_FOR_NODES: Stark family Stark NOT_SIMILAR
+The nodes are not similar.
+
+Comparing 'Sansa Stark' and 'Sansa':
+
+
+
+
+===================================
+Inptut: 
+    Compare the following two nodes and their neighborhoods:
+
+    Node 1:
+    Node 'Sansa Stark' has the following neighbors:
+- Starks (connected by PART_OF)
+
+    Node 2:
+    Node 'Sansa' has the following neighbors:
+- Stark (connected by CHILD_OF)
+
+    Are these two nodes similar?
+
+    If you are confident that names are almost the same, then ignore neighbourhood completely. Similarity could be measured by the following:
+    - Names are similar in terms of spelling or contain spelling mistakes
+    - names that are shortened or abbreviated versions of each other
+    - names that contain titles
+
+    But if you're not sure, then consider both the names and the neighborhood structures.
+
+    If yes, briefly explain why they are similar and then give what would be full name of the node, given their names are Sansa Stark and Sansa? $$<NAME>$$
+    If no, briefly explain why they are not similar and then give a final output $$NOT_SIMILAR$$.
+    
+++++++++++++++++++++++++++++
+Output: The two nodes can be considered similar. The names 'Sansa Stark' and 'Sansa' both refer to the same character from the popular series "Game of Thrones." The name 'Sansa' is a shortened version of 'Sansa Stark,' which makes them related, especially since 'Stark' indicates her family name.
+
+The neighborhoods also show that both nodes are connected to the Stark family—Node 1 identifies with the Starks as part of her family, while Node 2 signifies her as a child of the Stark family, which reinforces their connection.
+
+Thus, even though they might represent different relations in the neighborhood structures, the names being directly related and the fact that 'Sansa' is an abbreviation of 'Sansa Stark' indicates similarity.
+
+The full name of the node would be: $$Sansa Stark$$
+MERGING_STATUS_FOR_NODES: Sansa Stark Sansa Sansa Stark
+Nodes are similar. Merging with new name: Sansa Stark
+
+Comparing 'Sansa Stark' and 'Stark':
+
+
+
+
+===================================
+Inptut: 
+    Compare the following two nodes and their neighborhoods:
+
+    Node 1:
+    Node 'Sansa Stark' has the following neighbors:
+- Starks (connected by PART_OF)
+
+    Node 2:
+    Node 'Stark' has the following neighbors:
+- Ayra Stark (connected by CHILD_OF)
+- Sansa (connected by CHILD_OF)
+- Arya Stark (connected by CHILD_OF)
+
+    Are these two nodes similar?
+
+    If you are confident that names are almost the same, then ignore neighbourhood completely. Similarity could be measured by the following:
+    - Names are similar in terms of spelling or contain spelling mistakes
+    - names that are shortened or abbreviated versions of each other
+    - names that contain titles
+
+    But if you're not sure, then consider both the names and the neighborhood structures.
+
+    If yes, briefly explain why they are similar and then give what would be full name of the node, given their names are Sansa Stark and Stark? $$<NAME>$$
+    If no, briefly explain why they are not similar and then give a final output $$NOT_SIMILAR$$.
+    
+++++++++++++++++++++++++++++
+Output: The two nodes, "Sansa Stark" and "Stark," exhibit both similarities and differences. 
+
+In terms of their names, "Sansa Stark" includes the surname "Stark," which is identical to the full name "Stark," indicating they are from the same family. Furthermore, "Stark" is a common surname that appears in the full name of the first node.
+
+However, the neighborhoods indicate different relationships: 
+
+- Node 1 has one neighbor, "Starks," connected by "PART_OF," suggesting a broader familial or organizational connection. 
+- Node 2 has three neighbors (Ayra Stark, Sansa, and Arya Stark), each connected by "CHILD_OF," which implies a direct familial relationship where people are identified as children of the "Stark" family.
+
+Although the names can suggest a familial connection, the context around "Stark" reveals that it serves as a surname without specific attributes that would define it as closely related to the broader family represented by "Sansa Stark." The presence of multiple children in Node 2 underscores that "Stark" refers to a familial title rather than an individual, whereas "Sansa Stark" is an individual character with definite relationships.
+
+Given these points, I would conclude that the nodes are not similar due to their distinct contexts and neighborhood structures.
+
+Final output: $$NOT_SIMILAR$$
+MERGING_STATUS_FOR_NODES: Sansa Stark Stark NOT_SIMILAR
+The nodes are not similar.
+
+Comparing 'Ned Stark' and 'Stark':
+
+
+
+
+===================================
+Inptut: 
+    Compare the following two nodes and their neighborhoods:
+
+    Node 1:
+    Node 'Ned Stark' has the following neighbors:
+- Targaryens (connected by FOUNDED)
+- Catelyn Tully (connected by MARRIED_TO)
+- Jon Arryn (connected by COLLABORATES_WITH)
+- Robb Stark (connected by CHILD_OF)
+- Jon Snow (connected by SIBLING_OF)
+- Ned Stark's father (connected by CHILD_OF)
+- The Starks (connected by OWNER_OF)
+- Catelyn (connected by CHILD_OF)
+- Jon Arryn (connected by ALLIES_WITH)
+- Starks (connected by IS_EMPLOYED_BY)
+- Catelyn (connected by ALLIES_WITH)
+
+    Node 2:
+    Node 'Stark' has the following neighbors:
+- Ayra Stark (connected by CHILD_OF)
+- Sansa (connected by CHILD_OF)
+- Arya Stark (connected by CHILD_OF)
+
+    Are these two nodes similar?
+
+    If you are confident that names are almost the same, then ignore neighbourhood completely. Similarity could be measured by the following:
+    - Names are similar in terms of spelling or contain spelling mistakes
+    - names that are shortened or abbreviated versions of each other
+    - names that contain titles
+
+    But if you're not sure, then consider both the names and the neighborhood structures.
+
+    If yes, briefly explain why they are similar and then give what would be full name of the node, given their names are Ned Stark and Stark? $$<NAME>$$
+    If no, briefly explain why they are not similar and then give a final output $$NOT_SIMILAR$$.
+    
+++++++++++++++++++++++++++++
+Output: The two nodes are not similar. Although they share the last name "Stark," the first names associated with them are significantly different. Node 1 is specifically "Ned Stark," which refers to a specific character, while Node 2 is simply "Stark," which can refer to the family name without any individual identification. Moreover, the neighborhoods of the two nodes differ considerably; Node 1's neighborhood includes various characters and relationships that highlight Ned Stark's significant role in the story, while Node 2's neighborhood lists children associated with the "Stark" family but does not provide specific context or connection to an individual character. Therefore, the distinction in both names and neighborhood structures leads to the conclusion that they are not similar.
+
+$$NOT_SIMILAR$$
+MERGING_STATUS_FOR_NODES: Ned Stark Stark NOT_SIMILAR
+The nodes are not similar.
+
+Comparing 'Ned Stark' and 'Ned':
+
+
+
+
+===================================
+Inptut: 
+    Compare the following two nodes and their neighborhoods:
+
+    Node 1:
+    Node 'Ned Stark' has the following neighbors:
+- Targaryens (connected by FOUNDED)
+- Catelyn Tully (connected by MARRIED_TO)
+- Jon Arryn (connected by COLLABORATES_WITH)
+- Robb Stark (connected by CHILD_OF)
+- Jon Snow (connected by SIBLING_OF)
+- Ned Stark's father (connected by CHILD_OF)
+- The Starks (connected by OWNER_OF)
+- Catelyn (connected by CHILD_OF)
+- Jon Arryn (connected by ALLIES_WITH)
+- Starks (connected by IS_EMPLOYED_BY)
+- Catelyn (connected by ALLIES_WITH)
+
+    Node 2:
+    Node 'Ned' has the following neighbors:
+- Aerys (connected by MARRIED_TO)
+- Jaime Lannister (connected by AFFECTS)
+- Westerners (connected by MEMBER_OF)
+- Westerners (connected by PART_OF)
+- Aerys (connected by CHILD_OF)
+- Brandon Stark (connected by SIBLING_OF)
+
+    Are these two nodes similar?
+
+    If you are confident that names are almost the same, then ignore neighbourhood completely. Similarity could be measured by the following:
+    - Names are similar in terms of spelling or contain spelling mistakes
+    - names that are shortened or abbreviated versions of each other
+    - names that contain titles
+
+    But if you're not sure, then consider both the names and the neighborhood structures.
+
+    If yes, briefly explain why they are similar and then give what would be full name of the node, given their names are Ned Stark and Ned? $$<NAME>$$
+    If no, briefly explain why they are not similar and then give a final output $$NOT_SIMILAR$$.
+    
+++++++++++++++++++++++++++++
+Output: The two nodes, 'Ned Stark' and 'Ned,' are similar primarily due to the naming conventions. 'Ned' is widely recognized as a shortened or informal version of 'Eddard Stark,' who is commonly known as 'Ned Stark' in popular culture, particularly in the context of "Game of Thrones." Additionally, both names share the same first name 'Ned,' indicating a clear connection to the same character.
+
+However, the neighborhoods differ significantly. Node 1 has a rich set of relationships that include family ties, collaborations, alliances, and connections to his house and lineage. In contrast, Node 2 has a more limited set of connections and includes notable figures from a different part of the narrative, particularly related to the Targaryens and Lannisters.
+
+Despite the difference in neighborhood structures, the strong connection through the names still suggests a similarity.
+
+Therefore, the full name would be Eddard Stark: $$Eddard Stark$$.
+MERGING_STATUS_FOR_NODES: Ned Stark Ned Eddard Stark
+Nodes are similar. Merging with new name: Eddard Stark
+
+Comparing 'Ned Stark' and 'heir to Ned Stark':
+
+
+
+
+===================================
+Inptut: 
+    Compare the following two nodes and their neighborhoods:
+
+    Node 1:
+    Node 'Ned Stark' has the following neighbors:
+- Targaryens (connected by FOUNDED)
+- Catelyn Tully (connected by MARRIED_TO)
+- Jon Arryn (connected by COLLABORATES_WITH)
+- Robb Stark (connected by CHILD_OF)
+- Jon Snow (connected by SIBLING_OF)
+- Ned Stark's father (connected by CHILD_OF)
+- The Starks (connected by OWNER_OF)
+- Catelyn (connected by CHILD_OF)
+- Jon Arryn (connected by ALLIES_WITH)
+- Starks (connected by IS_EMPLOYED_BY)
+- Catelyn (connected by ALLIES_WITH)
+
+    Node 2:
+    Node 'heir to Ned Stark' has the following neighbors:
+- None (connected by None)
+
+    Are these two nodes similar?
+
+    If you are confident that names are almost the same, then ignore neighbourhood completely. Similarity could be measured by the following:
+    - Names are similar in terms of spelling or contain spelling mistakes
+    - names that are shortened or abbreviated versions of each other
+    - names that contain titles
+
+    But if you're not sure, then consider both the names and the neighborhood structures.
+
+    If yes, briefly explain why they are similar and then give what would be full name of the node, given their names are Ned Stark and heir to Ned Stark? $$<NAME>$$
+    If no, briefly explain why they are not similar and then give a final output $$NOT_SIMILAR$$.
+    
+++++++++++++++++++++++++++++
+Output: The two nodes, "Ned Stark" and "heir to Ned Stark," are similar in that they both explicitly reference the character Ned Stark. The phrase "heir to Ned Stark" suggests a direct relationship to Ned Stark, indicating that this character is either a descendant or a successor to him, which reinforces the connection. 
+
+However, despite this relationship, the names are not just spelling variations or abbreviations; rather, they have different meanings. "Ned Stark" is the established name of a prominent character, while "heir to Ned Stark" implies a title or role related to him, lacking a specific name. Furthermore, "heir to Ned Stark" does not specify an individual but rather describes a relationship based on lineage.
+
+Therefore, although related, they differ significantly in terms of their distinctiveness as names.
+
+Based on the relationships, "heir to Ned Stark" does lack direct neighbors indicating an independent character, unlike "Ned Stark," who has a diverse set of connections.
+
+Consequently, while there is a relationship between these nodes, they are not equivalent, leading to the conclusion that they are not similar.
+
+Final output: $$NOT_SIMILAR$$
+MERGING_STATUS_FOR_NODES: Ned Stark heir to Ned Stark NOT_SIMILAR
+The nodes are not similar.
+
+Comparing 'Ned Stark' and 'Ned Stark's father':
+
+
+
+
+===================================
+Inptut: 
+    Compare the following two nodes and their neighborhoods:
+
+    Node 1:
+    Node 'Ned Stark' has the following neighbors:
+- Targaryens (connected by FOUNDED)
+- Catelyn Tully (connected by MARRIED_TO)
+- Jon Arryn (connected by COLLABORATES_WITH)
+- Robb Stark (connected by CHILD_OF)
+- Jon Snow (connected by SIBLING_OF)
+- Ned Stark's father (connected by CHILD_OF)
+- The Starks (connected by OWNER_OF)
+- Catelyn (connected by CHILD_OF)
+- Jon Arryn (connected by ALLIES_WITH)
+- Starks (connected by IS_EMPLOYED_BY)
+- Catelyn (connected by ALLIES_WITH)
+
+    Node 2:
+    Node 'Ned Stark's father' has the following neighbors:
+- Ned Stark (connected by CHILD_OF)
+
+    Are these two nodes similar?
+
+    If you are confident that names are almost the same, then ignore neighbourhood completely. Similarity could be measured by the following:
+    - Names are similar in terms of spelling or contain spelling mistakes
+    - names that are shortened or abbreviated versions of each other
+    - names that contain titles
+
+    But if you're not sure, then consider both the names and the neighborhood structures.
+
+    If yes, briefly explain why they are similar and then give what would be full name of the node, given their names are Ned Stark and Ned Stark's father? $$<NAME>$$
+    If no, briefly explain why they are not similar and then give a final output $$NOT_SIMILAR$$.
+    
+++++++++++++++++++++++++++++
+Output: The two nodes, 'Ned Stark' and 'Ned Stark's father,' refer to the same individual and his immediate familial relationship, but they are not similar in terms of their neighborhoods or connections. 
+
+Node 1 ('Ned Stark') has multiple neighbors indicating a broad social, familial, and political network. This includes connections to his wife, children, allies, and historical ties to houses such as the Targaryens. 
+
+Node 2 ('Ned Stark's father'), in contrast, is singularly focused on the connection to 'Ned Stark,' indicating a much narrower scope. It shows a direct and only familial connection.
+
+Based on the names alone, they both share the name 'Ned Stark,' but 'Ned Stark's father' is simply a relational identifier rather than an independent entity with a complex network.
+
+Thus, while their names are similar, their neighborhoods significantly differ, leading us to conclude that they are not similar in a broader context.
+
+Final output: $$NOT_SIMILAR$$
+MERGING_STATUS_FOR_NODES: Ned Stark Ned Stark's father NOT_SIMILAR
+The nodes are not similar.
+
+Comparing 'Catelyn' and 'Counselor to Ned, Catelyn, and Robb':
+
+
+
+
+===================================
+Inptut: 
+    Compare the following two nodes and their neighborhoods:
+
+    Node 1:
+    Node 'Catelyn' has the following neighbors:
+- Petyr Baelish (connected by MARRIED_TO)
+- Tywin Lannister (connected by PARENT_OF)
+- Ned Stark (connected by CHILD_OF)
+- Ned Stark (connected by ALLIES_WITH)
+
+    Node 2:
+    Node 'Counselor to Ned, Catelyn, and Robb' has the following neighbors:
+- None (connected by None)
+
+    Are these two nodes similar?
+
+    If you are confident that names are almost the same, then ignore neighbourhood completely. Similarity could be measured by the following:
+    - Names are similar in terms of spelling or contain spelling mistakes
+    - names that are shortened or abbreviated versions of each other
+    - names that contain titles
+
+    But if you're not sure, then consider both the names and the neighborhood structures.
+
+    If yes, briefly explain why they are similar and then give what would be full name of the node, given their names are Catelyn and Counselor to Ned, Catelyn, and Robb? $$<NAME>$$
+    If no, briefly explain why they are not similar and then give a final output $$NOT_SIMILAR$$.
+    
+++++++++++++++++++++++++++++
+Output: The two nodes, 'Catelyn' and 'Counselor to Ned, Catelyn, and Robb', are not similar. 
+
+While 'Catelyn' is a straightforward name, 'Counselor to Ned, Catelyn, and Robb' is a title and describes the role and relationship of the individual rather than a name. The first node has a clear personal name and several relationships with other significant characters in the narrative context, while the second node does not share neighbors and falls short of having any distinct personal name like 'Catelyn'.
+
+The neighborhood structures also indicate a stark contrast; Node 1 is connected to prominent characters and has various relational links, while Node 2 has no connections at all.
+
+Thus, the two nodes are fundamentally different in nature—one being a proper name with relationships and the other being a descriptive title without any connections.
+
+Final output: $$NOT_SIMILAR$$.
+MERGING_STATUS_FOR_NODES: Catelyn Counselor to Ned, Catelyn, and Robb NOT_SIMILAR
+The nodes are not similar.
+
+Comparing 'Catelyn' and 'Catelyn Tully':
+
+
+
+
+===================================
+Inptut: 
+    Compare the following two nodes and their neighborhoods:
+
+    Node 1:
+    Node 'Catelyn' has the following neighbors:
+- Petyr Baelish (connected by MARRIED_TO)
+- Tywin Lannister (connected by PARENT_OF)
+- Ned Stark (connected by CHILD_OF)
+- Ned Stark (connected by ALLIES_WITH)
+
+    Node 2:
+    Node 'Catelyn Tully' has the following neighbors:
+- Winterfels (connected by LIVES_IN)
+- Ned Stark (connected by MARRIED_TO)
+- Eddard Stark (connected by MARRIED_TO)
+
+    Are these two nodes similar?
+
+    If you are confident that names are almost the same, then ignore neighbourhood completely. Similarity could be measured by the following:
+    - Names are similar in terms of spelling or contain spelling mistakes
+    - names that are shortened or abbreviated versions of each other
+    - names that contain titles
+
+    But if you're not sure, then consider both the names and the neighborhood structures.
+
+    If yes, briefly explain why they are similar and then give what would be full name of the node, given their names are Catelyn and Catelyn Tully? $$<NAME>$$
+    If no, briefly explain why they are not similar and then give a final output $$NOT_SIMILAR$$.
+    
+++++++++++++++++++++++++++++
+Output: The two nodes are not similar. 
+
+While they share the first name "Catelyn," the second node specifies a surname "Tully," which is an important differentiator. The first node simply lists "Catelyn" without a surname, leading to potential confusion regarding identity. Additionally, the neighborhoods of the two nodes feature different types of relationships and connections. Node 1 includes connections to characters like Petyr Baelish and Tywin Lannister, while Node 2 primarily connects to locations and Eddard Stark, featuring different kinds of relationships. 
+
+Thus, despite the similarity in the first name, the use of surnames and the distinct neighborhoods suggest they are different individuals.
+
+The final output is: $$NOT_SIMILAR$$.
+MERGING_STATUS_FOR_NODES: Catelyn Catelyn Tully NOT_SIMILAR
+The nodes are not similar.
+
+Comparing 'Catelyn' and 'Catelyn Stark':

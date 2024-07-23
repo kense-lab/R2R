@@ -1,0 +1,451 @@
+Retrieved 228 nodes.
+Found 201 pairs of nodes with similar names.
+
+Comparing 'Tyrion' and 'Tyrion Lannister':
+
+Comparing 'Lannister' and 'House Lannister':
+
+Comparing 'Lannister' and 'Cersei Lannister':
+
+Comparing 'Lannister' and 'Jaime Lannister':
+
+Comparing 'Lannister' and 'Tywin Lannister':
+
+Comparing 'Lannister' and 'House Lannister court':
+
+Comparing 'Lannister' and 'Tyrion Lannister':
+
+Comparing 'Lannister' and 'Lannister name':
+
+Comparing 'Bran Stark' and 'Bran':
+
+Comparing 'Bran Stark' and 'Stark':
+
+Comparing 'Bran Stark' and 'Brandon Stark':
+
+Comparing 'Stark family' and 'Stark':
+
+Comparing 'Sansa Stark' and 'Sansa':
+
+Comparing 'Sansa Stark' and 'Stark':
+
+Comparing 'Ned Stark' and 'Stark':
+
+Comparing 'Ned Stark' and 'Ned':
+
+Comparing 'Ned Stark' and 'heir to Ned Stark':
+
+Comparing 'Ned Stark' and 'Ned Stark's father':
+
+Comparing 'Catelyn' and 'Counselor to Ned, Catelyn, and Robb':
+
+Comparing 'Catelyn' and 'Catelyn Tully':
+
+Comparing 'Catelyn' and 'Catelyn Stark':
+
+Comparing 'Robb' and 'Counselor to Ned, Catelyn, and Robb':
+
+Comparing 'Robb' and 'Robb Stark':
+
+Comparing 'Theon Greyjoy' and 'Theon Greyjoy's birthday':
+
+Comparing 'Starks' and 'Stark':
+
+Comparing 'Starks' and 'The Starks':
+
+Comparing 'Rodrik Cassel' and 'Ser Rodrik Cassel':
+
+Comparing 'Counselor to Ned, Catelyn, and Robb' and 'Ned':
+
+Comparing 'Counselor to Ned, Catelyn, and Robb' and 'Counselor':
+
+Comparing 'Aerys' and 'Aerys II Targaryen':
+
+Comparing 'Aerys' and 'Aerys Targaryen':
+
+Comparing 'Aerys' and 'Brother of Daenerys and son of the murdered King Aerys Targaryen':
+
+Comparing 'Aerys' and 'Aerys II':
+
+Comparing 'Aerys' and 'King Aerys Targaryen':
+
+Comparing 'King's Justice' and 'King':
+
+Comparing 'House Lannister' and 'House Lannister court':
+
+Comparing 'Ser Gregor Cleagne' and 'Gregor':
+
+Comparing 'knight of the court' and 'court':
+
+Comparing 'knight of the court' and 'knight':
+
+Comparing 'The Mountain that Rides' and 'The Mountain':
+
+Comparing 'Bran' and 'Brandon Stark':
+
+Comparing 'Wall' and 'north of the Wall':
+
+Comparing 'Rickon Stark' and 'Stark':
+
+Comparing 'Stark children' and 'Stark':
+
+Comparing 'Stark children' and 'youngest of the Stark children':
+
+Comparing 'Aerys II Targaryen' and 'Targaryen':
+
+Comparing 'Aerys II Targaryen' and 'Aerys Targaryen':
+
+Comparing 'Aerys II Targaryen' and 'Aerys II':
+
+Comparing 'Targaryen' and 'Daenerys Targaryen':
+
+Comparing 'Targaryen' and 'Aerys Targaryen':
+
+Comparing 'Targaryen' and 'Brother of Daenerys and son of the murdered King Aerys Targaryen':
+
+Comparing 'Targaryen' and 'Targaryen family':
+
+Comparing 'Targaryen' and 'Daenerys Stormborn Targaryen':
+
+Comparing 'Targaryen' and 'Cat Targaryen':
+
+Comparing 'Targaryen' and 'Targaryens':
+
+Comparing 'Targaryen' and 'Targaryen clan':
+
+Comparing 'Targaryen' and 'Viserys Targaryen':
+
+Comparing 'Targaryen' and 'Targaryen family members':
+
+Comparing 'Targaryen' and 'Rhaegar Targaryen':
+
+Comparing 'Targaryen' and 'King Aerys Targaryen':
+
+Comparing 'Targaryen' and 'Targaryen loyalist':
+
+Comparing 'Targaryen' and 'Targaryens' chief adviser':
+
+Comparing 'Renly Baratheon' and 'Baratheon':
+
+Comparing 'Robert's royal council' and 'royal council':
+
+Comparing 'Robert's royal council' and 'Robert':
+
+Comparing 'Robert's royal council' and 'Robert's council':
+
+Comparing 'Baratheon' and 'Stannis Baratheon':
+
+Comparing 'Baratheon' and 'Joffrey Baratheon':
+
+Comparing 'Baratheon' and 'Robert Baratheon':
+
+Comparing 'Baratheon' and 'Joff Baratheon':
+
+Comparing 'king' and 'former king':
+
+Comparing 'king' and 'king of Westeros':
+
+Comparing 'Sansa' and 'Sansa's family':
+
+Comparing 'Arya Stark' and 'Stark':
+
+Comparing 'Arya Stark' and 'Arya':
+
+Comparing 'Arya Stark' and 'Ayra Stark':
+
+Comparing 'Stark' and 'Lyanna Stark':
+
+Comparing 'Stark' and 'Brandon Stark':
+
+Comparing 'Stark' and 'Eddard Stark':
+
+Comparing 'Stark' and 'Lady Stark of Winterfell':
+
+Comparing 'Stark' and 'Catelyn Stark':
+
+Comparing 'Stark' and 'Robb Stark':
+
+Comparing 'Stark' and 'eldest Stark son':
+
+Comparing 'Stark' and 'heir to Ned Stark':
+
+Comparing 'Stark' and 'The Starks':
+
+Comparing 'Stark' and 'youngest of the Stark children':
+
+Comparing 'Stark' and 'Stark daughter':
+
+Comparing 'Stark' and 'Ned Stark's father':
+
+Comparing 'Stark' and 'Starkland':
+
+Comparing 'Stark' and 'Bilbo Stark':
+
+Comparing 'Stark' and 'Ayra Stark':
+
+Comparing 'daughter' and 'Stark daughter':
+
+Comparing 'Joffrey Baratheon' and 'Joff Baratheon':
+
+Comparing 'Joffrey Baratheon' and 'Joffrey':
+
+Comparing 'twelve-year-old' and 'ten-year-old':
+
+Comparing 'Ayra' and 'Ayra Stark':
+
+Comparing 'Cersei Lannister' and 'Cersei':
+
+Comparing 'Queen of the realm' and 'realm':
+
+Comparing 'Robert Baratheon' and 'Robert':
+
+Comparing 'realm' and 'richest man in the realm':
+
+Comparing 'Khal Drogo' and 'Khal':
+
+Comparing 'Daenerys Targaryen' and 'Aerys Targaryen':
+
+Comparing 'Daenerys Targaryen' and 'Daenerys':
+
+Comparing 'Aerys Targaryen' and 'Brother of Daenerys and son of the murdered King Aerys Targaryen':
+
+Comparing 'Aerys Targaryen' and 'Viserys Targaryen':
+
+Comparing 'Aerys Targaryen' and 'King Aerys Targaryen':
+
+Comparing 'Westeros' and 'King of Westeros':
+
+Comparing 'Westeros' and 'king of Westeros':
+
+Comparing 'Westeros' and 'Westeros, the Sunflower Sea':
+
+Comparing 'Westeros' and 'West':
+
+Comparing 'King' and 'Beggar King':
+
+Comparing 'King' and 'Brother of Daenerys and son of the murdered King Aerys Targaryen':
+
+Comparing 'King' and 'Hand of the King':
+
+Comparing 'King' and 'King of Westeros':
+
+Comparing 'King' and 'The Mad King':
+
+Comparing 'King' and 'Kingslayer':
+
+Comparing 'King' and 'King's Landing':
+
+Comparing 'King' and 'Lord Commander of the Kingsguard':
+
+Comparing 'King' and 'Kingsguard':
+
+Comparing 'King' and 'Kingdom of Arryn':
+
+Comparing 'King' and 'King Aerys Targaryen':
+
+Comparing 'King' and 'The Beggar King':
+
+Comparing 'King' and 'The Kingslayer':
+
+Comparing 'Beggar King' and 'The Beggar King':
+
+Comparing 'Brother of Daenerys and son of the murdered King Aerys Targaryen' and 'Daenerys':
+
+Comparing 'Brother of Daenerys and son of the murdered King Aerys Targaryen' and 'King Aerys Targaryen':
+
+Comparing 'Dothraki' and 'Dothraki khaleesi':
+
+Comparing 'Dothraki' and 'Dothraki people':
+
+Comparing 'khalasar' and 'Khalasar':
+
+Comparing 'khalasar' and 'khal':
+
+Comparing 'Khal' and 'Khalasar':
+
+Comparing 'Daenerys' and 'Daenerys Stormborn Targaryen':
+
+Comparing 'Viserys' and 'Viserys Targaryen':
+
+Comparing 'Rhaegar' and 'Rhaegar Targaryen':
+
+Comparing 'Robert' and 'Robert's Rebellion':
+
+Comparing 'Robert' and 'Robert's Rebellion with warhammer on Trident River':
+
+Comparing 'Robert' and 'Robert's rebellion':
+
+Comparing 'Robert' and 'Robert's council':
+
+Comparing 'Robert' and 'Brother of Robert':
+
+Comparing 'Robert's Rebellion' and 'Robert's Rebellion with warhammer on Trident River':
+
+Comparing 'Robert's Rebellion' and 'Robert's rebellion':
+
+Comparing 'Trident River' and 'Robert's Rebellion with warhammer on Trident River':
+
+Comparing 'Eyrie' and 'Lord of the Eyrie':
+
+Comparing 'Jon Arryn' and 'Arryn':
+
+Comparing 'Robert's Rebellion with warhammer on Trident River' and 'war':
+
+Comparing 'King of Westeros' and 'king of Westeros':
+
+Comparing 'King of Westeros' and 'West':
+
+Comparing 'Ned' and 'heir to Ned Stark':
+
+Comparing 'Ned' and 'Ned Stark's father':
+
+Comparing 'Red Keep' and 'Red Keep's throne room':
+
+Comparing 'Red Keep' and 'Red Keep's staff':
+
+Comparing 'war' and 'ward':
+
+Comparing 'war' and 'Ser Allister Thorne's resentment towards new recruits':
+
+Comparing 'Jaime Lannister' and 'Jaime':
+
+Comparing 'Prince Joffrey' and 'Prince Joff':
+
+Comparing 'Prince Joffrey' and 'Joffrey':
+
+Comparing 'prince' and 'princess':
+
+Comparing 'Sandor Clegane' and 'Sandor':
+
+Comparing 'Dothraki khaleesi' and 'khal':
+
+Comparing 'Targaryen family' and 'Targaryen family members':
+
+Comparing 'Jon Snow' and 'Jon Snow's mother':
+
+Comparing 'Bronn' and 'Bronn is smart and skilled':
+
+Comparing 'Lysa Arryn' and 'Arryn':
+
+Comparing 'smart and skilled' and 'Bronn is smart and skilled':
+
+Comparing 'Kingslayer' and 'The Kingslayer':
+
+Comparing 'Lord of Winterfell' and 'Winterfell':
+
+Comparing 'Winterfell' and 'Lady Stark of Winterfell':
+
+Comparing 'Winterfell' and 'Winterfels':
+
+Comparing 'Catelyn Tully' and 'Cat Tully':
+
+Comparing 'Catelyn Tully' and 'Catulina Tully':
+
+Comparing 'Daenerys Stormborn Targaryen' and 'Stormborn':
+
+Comparing 'Jeor Mormont' and 'Jorah Mormont':
+
+Comparing 'Commander Mormont' and 'Commander':
+
+Comparing 'Commander' and 'Lord Commander':
+
+Comparing 'Commander' and 'Lord Commander of the Kingsguard':
+
+Comparing 'Lord Commander' and 'Lord Commander of the Kingsguard':
+
+Comparing 'Sam' and 'Samwell Tarly':
+
+Comparing 'Sam' and 'Sam Tarly':
+
+Comparing 'Ser Allister Thorne' and 'Allister Thorne':
+
+Comparing 'Ser Allister Thorne' and 'Ser Allister Thorne's resentment towards new recruits':
+
+Comparing 'Illyrio Mopatis' and 'Illyrio':
+
+Comparing 'court spy' and 'court':
+
+Comparing 'Westerners' and 'Western':
+
+Comparing 'Westerners' and 'West':
+
+Comparing 'king of Westeros' and 'West':
+
+Comparing 'court' and 'House Lannister court':
+
+Comparing 'Jorah Mormont' and 'Ser Jorah Mormont':
+
+Comparing 'Maester Luwin' and 'Luwin':
+
+Comparing 'Targaryens' and 'Targaryens' chief adviser':
+
+Comparing 'master-at-arms' and 'master-at-arms of Casterly Rock':
+
+Comparing 'Tywin Lannister' and 'Tyrion Lannister':
+
+Comparing 'lord of Casterly Rock' and 'Casterly Rock':
+
+Comparing 'master-at-arms of Casterly Rock' and 'Casterly Rock':
+
+Comparing 'Samwell Tarly' and 'Sam Tarly':
+
+Comparing 'Lord Commander of the Kingsguard' and 'Kingsguard':
+
+Comparing 'Viserys Targaryen' and 'King Aerys Targaryen':
+
+Comparing 'Kingdom of Arryn' and 'Arryn':
+
+Comparing 'ward' and 'Ser Allister Thorne's resentment towards new recruits':
+
+Comparing 'Allister Thorne' and 'Ser Allister Thorne's resentment towards new recruits':
+
+Comparing 'Westeros, the Sunflower Sea' and 'West':
+
+Comparing 'Western' and 'West':
+
+Comparing 'Tyrion' and 'Tyrion Lannister':
+
+
+
+
+===================================
+Inptut: 
+    Compare the following two nodes and their neighborhoods:
+
+    Node 1:
+    Node 'Tyrion' has the following neighbors:
+- Bronn (connected by COLLABORATES_WITH)
+- Jaime (connected by PREVENTS)
+- Bronn (connected by SAVES)
+- Stark family (connected by BELONGS_TO)
+
+    Node 2:
+    Node 'Tyrion Lannister' has the following neighbors:
+- Stark family (connected by MEMBER_OF)
+
+    Are these two nodes similar?
+
+    If you are confident that names are almost the same, then ignore neighbourhood completely. Similarity could be measured by the following:
+    - Names are similar in terms of spelling or contain spelling mistakes
+    - names that are shortened or abbreviated versions of each other
+    - names that contain titles
+
+    But if you're not sure, then consider both the names and the neighborhood structures.
+
+    If yes, briefly explain why they are similar and then give what would be full name of the node, given their names are Tyrion and Tyrion Lannister? $$<NAME>$$
+    If no, briefly explain why they are not similar and then give a final output $$NOT_SIMILAR$$.
+    
+++++++++++++++++++++++++++++
+Output: The two nodes, 'Tyrion' and 'Tyrion Lannister', are indeed similar. The names are very closely related, as 'Tyrion' is a shortened version or a commonly used name for 'Tyrion Lannister'. 
+
+Considering both names:
+- 'Tyrion' is a first name, while 'Tyrion Lannister' includes the last name, which is a title associated with the character, indicating his family lineage.
+- They share the same first name, clearly indicating a strong connection.
+
+If we focus on the neighborhoods, Node 1 has more complex connections indicating various kinds of relationships such as collaboration, prevention, and saving, while Node 2 has a simpler structure with only one relationship indicating membership in the Stark family. However, the significant similarity lies primarily in their names.
+
+The full name of the node would be: $$Tyrion Lannister$$
+MERGING_STATUS_FOR_NODES: Tyrion Tyrion Lannister Tyrion Lannister
+Nodes are similar. Merging with new name: Tyrion Lannister
+
+Comparing 'Lannister' and 'House Lannister':

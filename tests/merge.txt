@@ -1,0 +1,79 @@
+MERGING_STATUS_FOR_NODES: Tyrion  AND  Tyrion Lannister  ->  <Tyrion Lannister>
+
+MERGING_STATUS_FOR_NODES: Bran Stark  AND  Bran  ->  <NAME>
+
+MERGING_STATUS_FOR_NODES: Bran Stark  AND  Brandon Stark  ->  Brandon Stark
+
+MERGING_STATUS_FOR_NODES: Sansa Stark  AND  Sansa  ->  Sansa Stark
+
+MERGING_STATUS_FOR_NODES: Ned Stark  AND  Ned  ->  Ned Stark
+
+MERGING_STATUS_FOR_NODES: Ned Stark  AND  Ned Stark's father  ->  Eddard Stark
+
+MERGING_STATUS_FOR_NODES: Catelyn  AND  Catelyn Tully  ->  Catelyn Tully
+
+MERGING_STATUS_FOR_NODES: Catelyn  AND  Catelyn Stark  ->  <Catelyn Stark>
+
+MERGING_STATUS_FOR_NODES: Aerys  AND  Aerys II Targaryen  ->  Aerys II Targaryen
+
+MERGING_STATUS_FOR_NODES: Aerys  AND  Aerys Targaryen  ->  Aerys Targaryen
+
+MERGING_STATUS_FOR_NODES: Aerys  AND  Brother of Daenerys and son of the murdered King Aerys Targaryen  ->  Viserys Targaryen
+
+MERGING_STATUS_FOR_NODES: Aerys  AND  King Aerys Targaryen  ->  NOT_SIMILAR
+
+MERGING_STATUS_FOR_NODES: Ser Gregor Cleagne  AND  Gregor  ->  NOT_SIMILAR
+
+MERGING_STATUS_FOR_NODES: Bran  AND  Brandon Stark  ->  Brandon Stark
+
+MERGING_STATUS_FOR_NODES: Aerys II Targaryen  AND  Aerys Targaryen  ->  Aerys II Targaryen
+
+MERGING_STATUS_FOR_NODES: Cersei Lannister  AND  Cersei  ->  Cersei Lannister
+
+MERGING_STATUS_FOR_NODES: Robert Baratheon  AND  Robert  ->  <NAME> Robert Baratheon
+
+MERGING_STATUS_FOR_NODES: Daenerys Targaryen  AND  Aerys Targaryen  ->  NOT_SIMILAR
+
+MERGING_STATUS_FOR_NODES: Aerys Targaryen  AND  Brother of Daenerys and son of the murdered King Aerys Targaryen  ->  NOT_SIMILAR
+
+MERGING_STATUS_FOR_NODES: Aerys Targaryen  AND  Viserys Targaryen  ->  NOT_SIMILAR
+
+MERGING_STATUS_FOR_NODES: Aerys Targaryen  AND  King Aerys Targaryen  ->  King Aerys Targaryen
+
+MERGING_STATUS_FOR_NODES: Westeros  AND  Westeros, the Sunflower Sea  ->  Westeros, the Sunflower Sea
+
+MERGING_STATUS_FOR_NODES: Brother of Daenerys and son of the murdered King Aerys Targaryen  AND  King Aerys Targaryen  ->  NOT_SIMILAR
+
+MERGING_STATUS_FOR_NODES: Viserys  AND  Viserys Targaryen  ->  Viserys Targaryen
+
+MERGING_STATUS_FOR_NODES: Robert's Rebellion  AND  Robert's Rebellion with warhammer on Trident River  ->  Robert's Rebellion
+
+MERGING_STATUS_FOR_NODES: Robert's Rebellion with warhammer on Trident River  AND  war  ->  NOT_SIMILAR
+
+MERGING_STATUS_FOR_NODES: King of Westeros  AND  king of Westeros  ->  NOT_SIMILAR
+
+MERGING_STATUS_FOR_NODES: Ned  AND  Ned Stark's father  ->  NOT_SIMILAR
+
+MERGING_STATUS_FOR_NODES: Jaime Lannister  AND  Jaime  ->  Jaime Lannister
+
+MERGING_STATUS_FOR_NODES: Prince Joffrey  AND  Prince Joff  ->  Prince Joffrey
+
+MERGING_STATUS_FOR_NODES: Prince Joffrey  AND  Joffrey  ->  Prince Joffrey Baratheon
+
+MERGING_STATUS_FOR_NODES: Jon Snow  AND  Jon Snow's mother  ->  NOT_SIMILAR
+
+MERGING_STATUS_FOR_NODES: Winterfell  AND  Winterfels  ->  NOT_SIMILAR
+
+MERGING_STATUS_FOR_NODES: Jeor Mormont  AND  Jorah Mormont  ->  NOT_SIMILAR
+
+MERGING_STATUS_FOR_NODES: Commander Mormont  AND  Commander  ->  Commander Mormont
+
+MERGING_STATUS_FOR_NODES: Commander  AND  Lord Commander  ->  NOT_SIMILAR
+
+MERGING_STATUS_FOR_NODES: Sam  AND  Samwell Tarly  ->  <FULL_NAME: Samwell Tarly>
+
+MERGING_STATUS_FOR_NODES: Ser Allister Thorne  AND  Allister Thorne  ->  Ser Allister Thorne
+
+MERGING_STATUS_FOR_NODES: Tywin Lannister  AND  Tyrion Lannister  ->  Tywin Lannister
+
+MERGING_STATUS_FOR_NODES: Viserys Targaryen  AND  King Aerys Targaryen  ->  NOT_SIMILAR

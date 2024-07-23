@@ -1,0 +1,19 @@
+Retrieved 117 nodes.
+Found 80 pairs of nodes with similar names.
+> /Users/shreyas/KG/R2R/tests/clust.py(139)main()
+-> for node1_name, node2_name in similar_name_pairs:
+(Pdb) 134  	            print(f"Found {len(similar_name_pairs)} pairs of nodes with similar names.")
+135  	
+136  	
+137  	            import pdb; pdb.set_trace()
+138  	
+139  ->	            for node1_name, node2_name in similar_name_pairs:
+140  	                print(f"\nComparing '{node1_name}' and '{node2_name}':")
+141  	
+142  	            new_names = []
+143  	            for node1_name, node2_name in tqdm(similar_name_pairs):
+144  	                print(f"\nComparing '{node1_name}' and '{node2_name}':")
+(Pdb) --KeyboardInterrupt--
+(Pdb) --KeyboardInterrupt--
+(Pdb) --KeyboardInterrupt--
+(Pdb) 
