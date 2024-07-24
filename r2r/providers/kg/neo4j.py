@@ -383,6 +383,16 @@ class Neo4jKGProvider(PropertyGraphStore, KGProvider):
             param_map={"data": params},
         )
 
+    def add_node_description(self, node: EntityNode, description) -> None:
+
+        return self.structured_query(
+            """
+            MATCH (e:`__Entity__` {id: $id})
+            SET e.description = $description
+            """,
+            param_map={"id": node.id, "description": description},
+        )
+
     def get(
         self,
         properties: Optional[dict] = None,

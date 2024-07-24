@@ -76,8 +76,18 @@ class KGProvider(ABC):
 
     @abstractmethod
     def upsert_nodes(self, nodes: list[EntityNode]) -> None:
-        """Abstract method to add triplet."""
+        """Abstract method to add node."""
         pass
+
+    # @abstractmethod
+    # def deduplicate_nodes(self, nodes: list[EntityNode]) -> None:
+    #     """Abstract method to deduplicate from given nodes."""
+    #     pass
+
+    # @abstractmethod
+    # def add_node_description(self, nodes: list[EntityNode]) -> None:
+    #     """Add a description to each node."""
+    #     pass
 
     @abstractmethod
     def upsert_relations(self, relations: list[LlamaRelation]) -> None:
@@ -128,7 +138,6 @@ class KGProvider(ABC):
     ):
         """Abstract method to update the KG agent prompt."""
         pass
-
 
 def escape_braces(s: str) -> str:
     """

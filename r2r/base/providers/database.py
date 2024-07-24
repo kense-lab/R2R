@@ -185,6 +185,9 @@ class RelationalDatabaseProvider(Provider, ABC):
     def get_all_users(self) -> list[UserResponse]:
         pass
 
+    @abstractmethod
+    def get_fragments_by_id(self, fragment_ids: list[uuid.UUID]) -> list[dict]:
+        pass
 
 class DatabaseProvider(Provider):
 

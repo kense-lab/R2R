@@ -1,0 +1,545 @@
+{
+    "Viserys Targaryen": {
+        "neighbors": [
+            {
+                "predicate": "IS_EMPLOYED_BY",
+                "fragment_id": [
+                    "76fa36d3-7ac8-59ca-ac17-50bd76933dad"
+                ],
+                "name": "Sheriff's Office"
+            },
+            {
+                "predicate": "IS_EMPLOYED_BY",
+                "fragment_id": [
+                    "76fa36d3-7ac8-59ca-ac17-50bd76933dad"
+                ],
+                "name": "Visera"
+            },
+            {
+                "predicate": "SPEAKS",
+                "fragment_id": [
+                    "76fa36d3-7ac8-59ca-ac17-50bd76933dad"
+                ],
+                "name": "Targaryens"
+            },
+            {
+                "predicate": "MEMBER_OF",
+                "fragment_id": [
+                    "76fa36d3-7ac8-59ca-ac17-50bd76933dad"
+                ],
+                "name": "Targaryens"
+            }
+        ],
+        "fragments": [
+            "Title:got_full.txt\n\nSer Jorah Mormont\nAn exiled knight who serves unofficially as Daenerys\u2019s chief advisor. Though he was exiled by Ned Stark for selling slaves, he is intelligent, valiant, and a great fighter. He swears allegiance to Viserys as true king of Westeros, but he also feeds information about the Targaryens back to Varys.\nViserys Targaryen"
+        ],
+        "description": "Node: **Viserys Targaryen**\n\nViserys Targaryen is recognized as the true king of Westeros, as sworn by Ser Jorah Mormont, an exiled knight who serves as Daenerys Targaryen's chief advisor. Despite being exiled for his past actions, including selling slaves, Ser Jorah is portrayed as intelligent, valiant, and skilled in combat. In addition to his allegiance to Viserys, he secretly gathers and conveys information about the Targaryens to Varys, indicating a complex political dynamic involving loyalty and espionage surrounding Viserys's claim to the throne."
+    },
+    "Targaryens": {
+        "neighbors": [
+            {
+                "predicate": "SPEAKS",
+                "fragment_id": [
+                    "76fa36d3-7ac8-59ca-ac17-50bd76933dad"
+                ],
+                "name": "Viserys Targaryen"
+            },
+            {
+                "predicate": "MEMBER_OF",
+                "fragment_id": [
+                    "76fa36d3-7ac8-59ca-ac17-50bd76933dad"
+                ],
+                "name": "Viserys Targaryen"
+            }
+        ],
+        "fragments": [
+            "Title:got_full.txt\n\nSer Jorah Mormont\nAn exiled knight who serves unofficially as Daenerys\u2019s chief advisor. Though he was exiled by Ned Stark for selling slaves, he is intelligent, valiant, and a great fighter. He swears allegiance to Viserys as true king of Westeros, but he also feeds information about the Targaryens back to Varys.\nViserys Targaryen"
+        ],
+        "description": "Node: Targaryens\n\nThe Targaryens are a noble house from Westeros, with notable members including Viserys Targaryen. Viserys is characterized as the true king of Westeros, despite his exile and struggles for power. The Targaryens are connected to Ser Jorah Mormont, an exiled knight who serves as Daenerys's chief advisor. Jorah, although initially serving Viserys and swearing allegiance to him, also relays information about the Targaryens to Varys, indicating a complex political landscape involving allegiances and betrayals within the Targaryen lineage."
+    },
+    "King Aerys Targaryen": {
+        "neighbors": [
+            {
+                "predicate": "SIBLING_OF",
+                "fragment_id": [
+                    "e8930176-c21b-5ca8-bc36-05523feb05a8"
+                ],
+                "name": "Daenerys"
+            },
+            {
+                "predicate": "CHILD_OF",
+                "fragment_id": [
+                    "e8930176-c21b-5ca8-bc36-05523feb05a8"
+                ],
+                "name": "Khal Drogo"
+            }
+        ],
+        "fragments": [
+            "Title:got_full.txt\n\nViserys Targaryen\nBrother of Daenerys and son of the murdered King Aerys Targaryen. Having lived in exile for many years, earning him the nickname of The Beggar King, he wants to return to Westeros and retake the throne. He is arrogant, cruel, easily angered, and foolish.\nKhal Drogo\nA powerful khal (king) among the Dothraki people and the husband of Daenerys Targaryen. Stoic and brave, Drogo is an exceptional warrior who shows his enemies no mercy. He controls a massive nomadic tribe, or khalasar."
+        ],
+        "description": "Node 'King Aerys Targaryen' is referenced indirectly through his son, Viserys Targaryen. Aerys Targaryen is depicted as the murdered king, implying that he was overthrown or killed, leading to the exile of his children, Viserys and Daenerys. No additional details about Aerys Targaryen's character, reign, or deeds are provided in the chunks, thus limiting the description of this node to his role as Viserys and Daenerys\u2019s father and their claim to the throne of Westeros following his death."
+    },
+    "Robert": {
+        "neighbors": [
+            {
+                "predicate": "CHILD_OF",
+                "fragment_id": [
+                    "cee983e1-6f59-5130-8f24-caba48052d01"
+                ],
+                "name": "Prince Joffrey"
+            },
+            {
+                "predicate": "CHILD_OF",
+                "fragment_id": [
+                    "1f2a059a-df3b-5a33-a667-57d32c134c7f"
+                ],
+                "name": "Jeor Mormont"
+            },
+            {
+                "predicate": "FOUNDED",
+                "fragment_id": [
+                    "2d363dd6-5750-593a-b0c4-df94fde3dad0"
+                ],
+                "name": "Robert's Rebellion"
+            },
+            {
+                "predicate": "ALLIES_WITH",
+                "fragment_id": [
+                    "2d363dd6-5750-593a-b0c4-df94fde3dad0"
+                ],
+                "name": "Jon Arryn"
+            }
+        ],
+        "fragments": [
+            "Title:got_full.txt\n\nPrince Joffrey (Joff) Baratheon\nThe repulsive prince of Westeros. The twelve-year-old Joff is the eldest child of Cersei and Robert, and he is spoiled, impulsive, and cruel when using his power as prince and heir to the throne.\nSandor (The Hound) Clegane",
+            "Title:got_full.txt\n\nLysa Arryn\nThe inconstant and irrational ruler of the Eyrie and sister of Catelyn Stark. Her paranoid, obsessive care of her only son, Robert, consumes her after her husband, Jon Arryn, the former Hand of the King, is murdered. Though she grew up with Catelyn, the two are now very different.\nJeor Mormont (Commander Mormont)\nLord Commander of the Night\u2019s Watch at Castle Black. Commander Mormont is tough, old, and wise, and his men call him \u201cThe Old Bear.\u201d\nMaester Aemon",
+            "Title:got_full.txt\n\nRhaegar Targaryen\nThe heir to Aerys and older brother of Daenerys and Viserys. Rhaegar kidnapped Lyanna Stark, Robert\u2019s betrothed, helping to set in motion the events that led to Robert\u2019s Rebellion. The war effectively ended when Robert slew Rhaegar with his warhammer on the Trident River.\nJon Arryn\nThe recently deceased Lord of the Eyrie and Hand of the King. Jon Arryn fostered Ned Stark and Robert Baratheon at the Eyrie. When Robert became king, Jon Arryn served as his Hand until his murder."
+        ],
+        "description": "Node 'Robert' refers to Robert Baratheon, who is not explicitly described in the chunks provided, but information about him can be inferred.\n\n1. **Relationships**: Robert Baratheon is the father of Prince Joffrey Baratheon, reflecting a direct familial relationship, as Joffrey is identified as his child with Cersei Lannister. Additionally, Robert has a significant connection to Rhaegar Targaryen, as Rhaegar's actions of kidnapping Lyanna Stark (Robert's betrothed) played a crucial role in instigating Robert's Rebellion, a pivotal conflict in the storyline.\n\n2. **Historical Context**: Robert is referenced in the context of Jon Arryn, who served as his Hand of the King prior to his death. This relationship denotes Robert's position of power as king and highlights the political dynamics of the realm during his rule.\n\n3. **Legacy**: The chunks imply that Robert's actions and decisions, including his involvement in the events leading up to his ascension to the throne, are foundational to the overarching narrative. His triumph over Rhaegar Targaryen at the Trident River is a significant moment in history, marking the end of Robert\u2019s Rebellion.\n\nOverall, while specific characteristics or attributes of Robert Baratheon are not detailed in the chunks, the fragments do provide insight into his familial connections and his historical significance within the storyline."
+    },
+    "Robb Stark": {
+        "neighbors": [
+            {
+                "predicate": "CHILD_OF",
+                "fragment_id": [
+                    "ecab0dca-be2f-5a19-86cb-5b930517c574"
+                ],
+                "name": "Ned Stark"
+            }
+        ],
+        "fragments": [
+            "Title:got_full.txt\n\nPrince Joff\u2019s unofficial bodyguard. Proud that he is not a knight, The Hound appears to have no scruples whatsoever and does what Joffrey orders, however cruel or unjust, without question. His face is scarred on one side by extensive burning inflicted by his brother, Gregor.\nRobb Stark\nThe eldest Stark son and thus heir to Ned Stark. Though just fourteen, he is mature beyond his age as well as being brave and dutiful like his father.\nMaester Luwin"
+        ],
+        "description": "Node 'Robb Stark' refers to the eldest son of Ned Stark, positioned as the heir to his family's legacy. Despite being only fourteen years old, Robb is characterized by his maturity, bravery, and sense of duty, traits that reflect his father's influence and values. The information indicates that Robb Stark is a significant character within the narrative, embodying qualities that suggest he is prepared for the responsibilities of leadership."
+    },
+    "Ned Stark": {
+        "neighbors": [
+            {
+                "predicate": "CHILD_OF",
+                "fragment_id": [
+                    "ecab0dca-be2f-5a19-86cb-5b930517c574"
+                ],
+                "name": "Robb Stark"
+            },
+            {
+                "predicate": "CHILD_OF",
+                "fragment_id": [
+                    "628ddf16-4c39-5a2f-b85e-9522cd882335"
+                ],
+                "name": "Aerys"
+            },
+            {
+                "predicate": "CHILD_OF",
+                "fragment_id": [
+                    "628ddf16-4c39-5a2f-b85e-9522cd882335"
+                ],
+                "name": "Brandon Stark"
+            }
+        ],
+        "fragments": [
+            "Title:got_full.txt\n\nPrince Joff\u2019s unofficial bodyguard. Proud that he is not a knight, The Hound appears to have no scruples whatsoever and does what Joffrey orders, however cruel or unjust, without question. His face is scarred on one side by extensive burning inflicted by his brother, Gregor.\nRobb Stark\nThe eldest Stark son and thus heir to Ned Stark. Though just fourteen, he is mature beyond his age as well as being brave and dutiful like his father.\nMaester Luwin",
+            "Title:got_full.txt\n\nRickon Stark\nThe youngest of the Stark children. Three-year-old Rickon is wild and undisciplined, as is his pet direwolf.\nAerys II Targaryen\nKing of Westeros before Robert Baratheon. He was known as The Mad King because of his cruelty. Aerys murdered Ned\u2019s older brother, Brandon Stark, in the Red Keep\u2019s throne room. At the end of the war that followed, Jaime Lannister slew Aerys in the same room.\nRhaegar Targaryen"
+        ],
+        "description": "**Node: Ned Stark**\n\nNed Stark is the father of Robb Stark and Rickon Stark. He is the head of House Stark and is known for his strong sense of duty, bravery, and maturity, characteristics that he has instilled in his children. His reputation is marked by an unwavering commitment to honor, which is mirrored in his eldest son, Robb, who is poised to inherit his legacy. \n\nNed Stark has a tragic history, particularly in relation to Aerys II Targaryen, known as The Mad King, who was responsible for the murder of Ned's older brother, Brandon Stark. This act of cruelty by Aerys ultimately contributed to the larger conflict that would lead to Jaime Lannister killing the Mad King in the very throne room where Brandon was slain.\n\nThe narrative surrounding Ned Stark emphasizes his moral integrity and protective instincts towards his family, a stark contrast to figures like Prince Joffrey and his bodyguard, The Hound, who exhibit a willingness to engage in cruelty without question."
+    },
+    "Starks": {
+        "neighbors": [
+            {
+                "predicate": "BELONGS_TO",
+                "fragment_id": [
+                    "52c0ca39-33e5-54fb-9321-61c6aa8aad57"
+                ],
+                "name": "Theon Greyjoy"
+            },
+            {
+                "predicate": "IS_EMPLOYED_BY",
+                "fragment_id": [
+                    "3a7f63cf-57ec-5f04-940b-96082ddd2670"
+                ],
+                "name": "Rickon Stark"
+            }
+        ],
+        "fragments": [
+            "Title:got_full.txt\n\nMaester Luwin\nCounselor to Ned, Catelyn, and Robb. Luwin is old and wise, and his advice proves indispensible to the Starks.\nTheon Greyjoy\nThe Starks\u2019s ward and Robb\u2019s best friend. Ned Stark took the young Theon, now nineteen, as a ward after putting down a rebellion led by the Greyjoy family, and Theon consequently grew up with the Stark children as something like a brother.\nSer Rodrik Cassel",
+            "Title:got_full.txt\n\nSer Gregor Cleagne\nThe Hound\u2019s older brother and a knight of the court. Called The Mountain that Rides, Ser Gregor is even larger and crueler than the Hound himself. He is also a sore loser and a marginal commander in battle.\nOsha\nA wildling woman who becomes a ward of the Starks after trying to kidnap Bran. She is tough and strong, and she takes care of Bran after her capture, telling him stories about life in the wild and warning him about what is happening north of the Wall.\nRickon Stark"
+        ],
+        "description": "The node 'Starks' refers to a prominent family in the context of the referenced chunks. Key figures associated with the Starks include:\n\n1. **Maester Luwin**: He is depicted as an elderly and wise counselor to the Stark family, specifically to Ned, Catelyn, and Robb. His role is crucial, as his advice is indispensable to the family.\n\n2. **Theon Greyjoy**: Theon is identified as a ward of the Starks and is particularly close to Robb Stark, having grown up alongside him and the other Stark children after Ned Stark took him in following a rebellion by the Greyjoy family. This background has forged a brotherly bond between him and Robb.\n\n3. **Osha**: Initially a wildling woman who attempted to kidnap Bran Stark, she becomes a ward of the Starks after her capture. Osha is characterized as tough and strong, taking on the responsibility of caring for Bran and sharing stories about life in the wild, as well as providing warnings about dangers beyond the Wall.\n\n4. **Rickon Stark**: Another member of the Stark family mentioned, though specific details about him are not provided in the chunks.\n\nOverall, the Starks appear to be a family rooted in strong relationships, loyalty, and the guidance of wise counsel, with connections to various characters who play significant roles in their lives."
+    },
+    "Stark children": {
+        "neighbors": [
+            {
+                "predicate": "BELONGS_TO",
+                "fragment_id": [
+                    "52c0ca39-33e5-54fb-9321-61c6aa8aad57"
+                ],
+                "name": "Theon"
+            },
+            {
+                "predicate": "CHILD_OF",
+                "fragment_id": [
+                    "37f7654a-5475-5c45-9497-4569ce7c7020"
+                ],
+                "name": "Bran Stark"
+            }
+        ],
+        "fragments": [
+            "Title:got_full.txt\n\nTyrion (The Imp) Lannister\nA small man with a giant intellect and sharp tongue. Tyrion does not pity himself but rather accepts his shortcomings as a little person and turns them to his advantage. He loves his family but recognizes their greed and ambition.\nBran Stark\nOne of the youngest of the Stark children. Bran is fascinated by stories of knights and adventure, but when is paralyzed in a fall and realizes he is no longer able to become a knight, he is forced to reconsider his life.\nSansa Stark",
+            "Title:got_full.txt\n\nMaester Luwin\nCounselor to Ned, Catelyn, and Robb. Luwin is old and wise, and his advice proves indispensible to the Starks.\nTheon Greyjoy\nThe Starks\u2019s ward and Robb\u2019s best friend. Ned Stark took the young Theon, now nineteen, as a ward after putting down a rebellion led by the Greyjoy family, and Theon consequently grew up with the Stark children as something like a brother.\nSer Rodrik Cassel"
+        ],
+        "description": "The node 'Stark children' refers to the offspring of the Stark family, who are notable characters in the narrative. The chunks provided specifically mention two of the Stark children:\n\n1. **Bran Stark**: He is one of the youngest of the Stark children. Initially, he is intrigued by tales of knights and adventures, but his life takes a drastic turn when he becomes paralyzed from a fall. This event forces him to reevaluate his aspirations of becoming a knight.\n\n2. **Sansa Stark**: While her characteristics and storyline are not detailed in the chunks provided, she is acknowledged as one of the Stark children.\n\nAdditionally, the context includes related characters such as Tyrion Lannister, Maester Luwin, and Theon Greyjoy, but these figures are not Stark children themselves. Theon is noted as a ward of the Starks and a close companion to Robb Stark, highlighting the relationships that the Stark children maintain with those around them. The emphasis on Bran's transformation and struggle suggests themes of resilience and growth in the face of adversity among the Stark children."
+    },
+    "Eddard Stark": {
+        "neighbors": [
+            {
+                "predicate": "MARRIED_TO",
+                "fragment_id": [
+                    "9e84e21d-67f5-5a34-a1d1-ff81781ad627"
+                ],
+                "name": "Catelyn Tully"
+            }
+        ],
+        "fragments": [
+            "Title:got_full.txt\n\nEddard (Ned) Stark\nThe Lord of Winterfell and new Hand of the King. A devoted father and dutiful lord, he is best characterized by his strong sense of honor, and he strives to always do what is right, regardless of his personal feelings.\nCatelyn (Cat) Tully\nNed\u2019s wife and Lady Stark of Winterfell. She is intelligent, strong, and fiercely devoted to her family, leading her to seek out the person responsible for trying to kill her son Bran.\nDaenerys Stormborn Targaryen"
+        ],
+        "description": "Eddard Stark, often referred to as Ned, is the Lord of Winterfell and the newly appointed Hand of the King. He is depicted as a devoted father and a dutiful lord, characterized by his strong sense of honor. Eddard is committed to doing what is right, often prioritizing his sense of duty over his personal feelings. His wife is Catelyn Tully, known as Cat, who is intelligent, strong, and deeply devoted to their family. Catelyn\u2019s dedication drives her to seek out those responsible for a recent attempt on the life of their son, Bran."
+    },
+    "Bran Stark": {
+        "neighbors": [
+            {
+                "predicate": "BELONGS_TO",
+                "fragment_id": [
+                    "37f7654a-5475-5c45-9497-4569ce7c7020"
+                ],
+                "name": "Stark"
+            },
+            {
+                "predicate": "ALLIES_WITH",
+                "fragment_id": [
+                    "37f7654a-5475-5c45-9497-4569ce7c7020"
+                ],
+                "name": "The Imp"
+            },
+            {
+                "predicate": "CHILD_OF",
+                "fragment_id": [
+                    "37f7654a-5475-5c45-9497-4569ce7c7020"
+                ],
+                "name": "Stark children"
+            }
+        ],
+        "fragments": [
+            "Title:got_full.txt\n\nTyrion (The Imp) Lannister\nA small man with a giant intellect and sharp tongue. Tyrion does not pity himself but rather accepts his shortcomings as a little person and turns them to his advantage. He loves his family but recognizes their greed and ambition.\nBran Stark\nOne of the youngest of the Stark children. Bran is fascinated by stories of knights and adventure, but when is paralyzed in a fall and realizes he is no longer able to become a knight, he is forced to reconsider his life.\nSansa Stark"
+        ],
+        "description": "**Node: Bran Stark**\n\nBran Stark is one of the youngest children of the Stark family. He has a keen fascination with tales of knights and adventures, embodying the dreams of valor and excitement associated with such stories. However, his life takes a dramatic turn when he suffers a fall that results in paralysis, forcing him to reevaluate his aspirations and the path his life is now taking, as he comes to terms with the fact that he will no longer be able to fulfill his dream of becoming a knight."
+    },
+    "Stark": {
+        "neighbors": [
+            {
+                "predicate": "BELONGS_TO",
+                "fragment_id": [
+                    "37f7654a-5475-5c45-9497-4569ce7c7020"
+                ],
+                "name": "Bran Stark"
+            },
+            {
+                "predicate": "BELONGS_TO",
+                "fragment_id": [
+                    "37f7654a-5475-5c45-9497-4569ce7c7020"
+                ],
+                "name": "Sansa Stark"
+            },
+            {
+                "predicate": "CHILD_OF",
+                "fragment_id": [
+                    "3a7f63cf-57ec-5f04-940b-96082ddd2670"
+                ],
+                "name": "Rickon Stark"
+            },
+            {
+                "predicate": "CHILD_OF",
+                "fragment_id": [
+                    "ec2edebc-6932-579d-999e-6c4cbb22585d"
+                ],
+                "name": "Ayra"
+            }
+        ],
+        "fragments": [
+            "Title:got_full.txt\n\nTyrion (The Imp) Lannister\nA small man with a giant intellect and sharp tongue. Tyrion does not pity himself but rather accepts his shortcomings as a little person and turns them to his advantage. He loves his family but recognizes their greed and ambition.\nBran Stark\nOne of the youngest of the Stark children. Bran is fascinated by stories of knights and adventure, but when is paralyzed in a fall and realizes he is no longer able to become a knight, he is forced to reconsider his life.\nSansa Stark",
+            "Title:got_full.txt\n\nArya Stark\nThe youngest Stark girl and a wild, willful, but very intelligent child. What the ten-year-old Ayra lacks in her sister\u2019s refinement, she makes up for with skill in swordfighting and riding. Arya rejects the idea of a woman\u2019s role being to marry and have babies.\nCersei Lannister\nQueen of the realm and wife of Robert Baratheon. She despises Robert (as well as most other people it seems), and she is cunning and extremely ambitious.\nSer Jaime (The Kingslayer) Lannister",
+            "Title:got_full.txt\n\nSer Gregor Cleagne\nThe Hound\u2019s older brother and a knight of the court. Called The Mountain that Rides, Ser Gregor is even larger and crueler than the Hound himself. He is also a sore loser and a marginal commander in battle.\nOsha\nA wildling woman who becomes a ward of the Starks after trying to kidnap Bran. She is tough and strong, and she takes care of Bran after her capture, telling him stories about life in the wild and warning him about what is happening north of the Wall.\nRickon Stark"
+        ],
+        "description": "Based on the provided chunks, the Node 'Stark' can be described as follows:\n\nThe Stark family is one of the prominent families in the realm, featuring several notable children. Among them is Bran Stark, one of the youngest Stark children who, after being paralyzed, reevaluates his aspirations of becoming a knight and finds himself captivated by tales of adventure. His sibling, Arya Stark, is the youngest daughter, characterized by her wild and willful nature. Arya possesses intelligence and exceptional skills in swordfighting and riding, rejecting traditional female roles in favor of adventure and independence. Additionally, Rickon Stark is also part of the family, contributing to the dynamics within the Stark household.\n\nThe Starks are portrayed as a resilient and strong family, with each child displaying distinct personalities and challenges that shape their journeys."
+    },
+    "Sansa Stark": {
+        "neighbors": [
+            {
+                "predicate": "BELONGS_TO",
+                "fragment_id": [
+                    "37f7654a-5475-5c45-9497-4569ce7c7020"
+                ],
+                "name": "Stark"
+            },
+            {
+                "predicate": "CHILD_OF",
+                "fragment_id": [
+                    "c056ad09-6967-5314-8639-557e97c7e2cd"
+                ],
+                "name": "Stark family"
+            },
+            {
+                "predicate": "SIBLING_OF",
+                "fragment_id": [
+                    "c056ad09-6967-5314-8639-557e97c7e2cd"
+                ],
+                "name": "Sainna Stark"
+            },
+            {
+                "predicate": "BELONGS_TO",
+                "fragment_id": [
+                    "c056ad09-6967-5314-8639-557e97c7e2cd"
+                ],
+                "name": "Stark family elder"
+            }
+        ],
+        "fragments": [
+            "Title:got_full.txt\n\nTyrion (The Imp) Lannister\nA small man with a giant intellect and sharp tongue. Tyrion does not pity himself but rather accepts his shortcomings as a little person and turns them to his advantage. He loves his family but recognizes their greed and ambition.\nBran Stark\nOne of the youngest of the Stark children. Bran is fascinated by stories of knights and adventure, but when is paralyzed in a fall and realizes he is no longer able to become a knight, he is forced to reconsider his life.\nSansa Stark",
+            "Title:got_full.txt\n\nSansa Stark\nThe elder Stark daughter and a beautiful, but extremely na\u00efve, young girl. The twelve-year-old Sansa imagines her life as though it were a storybook, ignoring cruel realities around her and concerning herself only with marrying Joffrey Baratheon.\nArya Stark"
+        ],
+        "description": "Node: Sansa Stark\n\nSansa Stark is the elder daughter of the Stark family and is characterized as a beautiful, yet extremely na\u00efve young girl. At twelve years old, she views her life through the lens of a storybook, often ignoring the harsh realities that surround her. Her primary concern is marrying Joffrey Baratheon, reflecting her romanticized perspective on life."
+    },
+    "Robert's royal council": {
+        "neighbors": [
+            {
+                "predicate": "IS_EMPLOYED_BY",
+                "fragment_id": [
+                    "6fb8e95f-9ef1-5969-b41c-5f2258c2404c"
+                ],
+                "name": "Renly Baratheon"
+            },
+            {
+                "predicate": "MEMBER_OF",
+                "fragment_id": [
+                    "6fb8e95f-9ef1-5969-b41c-5f2258c2404c"
+                ],
+                "name": "Stannis Baratheon"
+            }
+        ],
+        "fragments": [
+            "Title:got_full.txt\n\nSer Barristan Selmy\nLord Commander of the Kingsguard. He has served kings Jaehaerys, Aerys II, and Robert. Though he has grown old, Barristan \u201cThe Bold\u201d is a formidable fighter. He is, and has always been, an honorable knight.\nRenly Baratheon\nThe youngest of the three Baratheon brothers. Renly is lighthearted and opportunistic, and unexpectedly ambitious. He serves on Robert\u2019s royal council.\nStannis Baratheon"
+        ],
+        "description": "Node: Robert's royal council\n\nThe council includes key figures serving under King Robert Baratheon, each bringing their own characteristics and backgrounds. One significant member is Ser Barristan Selmy, the Lord Commander of the Kingsguard, who has a long history of service to previous kings, including Robert. Despite his old age, he remains a formidable fighter and is known for his honor as a knight.\n\nAnother notable member is Renly Baratheon, the youngest of the Baratheon brothers. He is characterized by his lightheartedness, opportunistic nature, and unexpected ambition. Renly's contributions to the council are marked by his distinct personality and perspective, contrasting with the experiences and qualities of older council members like Barristan. \n\nStannis Baratheon is also associated with this council, although specific details about his role and attributes are not provided in the chunks."
+    },
+    "Stark family": {
+        "neighbors": [
+            {
+                "predicate": "CHILD_OF",
+                "fragment_id": [
+                    "c056ad09-6967-5314-8639-557e97c7e2cd"
+                ],
+                "name": "Sansa Stark"
+            }
+        ],
+        "fragments": [
+            "Title:got_full.txt\n\nSansa Stark\nThe elder Stark daughter and a beautiful, but extremely na\u00efve, young girl. The twelve-year-old Sansa imagines her life as though it were a storybook, ignoring cruel realities around her and concerning herself only with marrying Joffrey Baratheon.\nArya Stark"
+        ],
+        "description": "The Stark family is represented through its daughters, Sansa and Arya Stark. Sansa Stark, the elder daughter, is depicted as a beautiful but extremely na\u00efve twelve-year-old girl. She tends to romanticize her life, viewing it through the lens of a storybook, which leads her to ignore the harsh realities surrounding her. Her primary concern revolves around her desire to marry Joffrey Baratheon. Arya Stark, on the other hand, is mentioned but not described in the provided chunk, leaving her characteristics and story unexplored in this context. Overall, the Stark family is presented with a focus on Sansa's youthful innocence and aspirations."
+    },
+    "Sainna Stark": {
+        "neighbors": [
+            {
+                "predicate": "SIBLING_OF",
+                "fragment_id": [
+                    "c056ad09-6967-5314-8639-557e97c7e2cd"
+                ],
+                "name": "Sansa Stark"
+            },
+            {
+                "predicate": "MARRIED_TO",
+                "fragment_id": [
+                    "c056ad09-6967-5314-8639-557e97c7e2cd"
+                ],
+                "name": "Joffrey Baratheon"
+            }
+        ],
+        "fragments": [
+            "Title:got_full.txt\n\nSansa Stark\nThe elder Stark daughter and a beautiful, but extremely na\u00efve, young girl. The twelve-year-old Sansa imagines her life as though it were a storybook, ignoring cruel realities around her and concerning herself only with marrying Joffrey Baratheon.\nArya Stark"
+        ],
+        "description": "Node: Sansa Stark\n\nSansa Stark is the elder daughter of the Stark family. She is characterized as a beautiful but extremely na\u00efve young girl. At the age of twelve, Sansa dreams of her life as if it were a storybook, showing her innocence and idealism. She tends to ignore the harsh realities surrounding her and is primarily focused on the idea of marrying Joffrey Baratheon."
+    },
+    "Stark family elder": {
+        "neighbors": [
+            {
+                "predicate": "BELONGS_TO",
+                "fragment_id": [
+                    "c056ad09-6967-5314-8639-557e97c7e2cd"
+                ],
+                "name": "Sansa Stark"
+            }
+        ],
+        "fragments": [
+            "Title:got_full.txt\n\nSansa Stark\nThe elder Stark daughter and a beautiful, but extremely na\u00efve, young girl. The twelve-year-old Sansa imagines her life as though it were a storybook, ignoring cruel realities around her and concerning herself only with marrying Joffrey Baratheon.\nArya Stark"
+        ],
+        "description": "The \"Stark family elder\" node likely refers to the elder daughter of the Stark family, which is Sansa Stark. She is described as a beautiful but extremely na\u00efve twelve-year-old girl. Sansa tends to view her life through the lens of a storybook, often ignoring the harsh realities that exist around her. Her primary concern at this point in her life is her desire to marry Joffrey Baratheon."
+    },
+    "Rickon Stark": {
+        "neighbors": [
+            {
+                "predicate": "CHILD_OF",
+                "fragment_id": [
+                    "3a7f63cf-57ec-5f04-940b-96082ddd2670"
+                ],
+                "name": "Stark"
+            },
+            {
+                "predicate": "IS_EMPLOYED_BY",
+                "fragment_id": [
+                    "3a7f63cf-57ec-5f04-940b-96082ddd2670"
+                ],
+                "name": "Starks"
+            }
+        ],
+        "fragments": [
+            "Title:got_full.txt\n\nSer Gregor Cleagne\nThe Hound\u2019s older brother and a knight of the court. Called The Mountain that Rides, Ser Gregor is even larger and crueler than the Hound himself. He is also a sore loser and a marginal commander in battle.\nOsha\nA wildling woman who becomes a ward of the Starks after trying to kidnap Bran. She is tough and strong, and she takes care of Bran after her capture, telling him stories about life in the wild and warning him about what is happening north of the Wall.\nRickon Stark"
+        ],
+        "description": "Node 'Rickon Stark' is a character from the \"Game of Thrones\" universe. In the provided chunks, there is specific information about other characters such as Ser Gregor Clegane and Osha, but no direct information about Rickon Stark is given. The context indicates that Rickon is a Stark, which connects him to the Stark family, but no further details about his role, personality, or actions are included in the chunks. Therefore, it can be concluded that Rickon Stark is a character linked to the Stark family without additional context or characteristics highlighted in the current chunks."
+    },
+    "Aerys II Targaryen": {
+        "neighbors": [
+            {
+                "predicate": "PART_OF",
+                "fragment_id": [
+                    "3a7f63cf-57ec-5f04-940b-96082ddd2670"
+                ],
+                "name": "Targaryen"
+            }
+        ],
+        "fragments": [
+            "Title:got_full.txt\n\nSer Gregor Cleagne\nThe Hound\u2019s older brother and a knight of the court. Called The Mountain that Rides, Ser Gregor is even larger and crueler than the Hound himself. He is also a sore loser and a marginal commander in battle.\nOsha\nA wildling woman who becomes a ward of the Starks after trying to kidnap Bran. She is tough and strong, and she takes care of Bran after her capture, telling him stories about life in the wild and warning him about what is happening north of the Wall.\nRickon Stark"
+        ],
+        "description": "The node 'Aerys II Targaryen' does not have any specific information or details provided in the given chunks. The available chunks focus on other characters such as Ser Gregor Clegane (The Mountain), Osha, and Rickon Stark, but there are no references or descriptions related to Aerys II Targaryen in the provided content. Therefore, based on the chunks, no meaningful description of the node 'Aerys II Targaryen' can be constructed."
+    },
+    "Targaryen": {
+        "neighbors": [
+            {
+                "predicate": "PART_OF",
+                "fragment_id": [
+                    "3a7f63cf-57ec-5f04-940b-96082ddd2670"
+                ],
+                "name": "Aerys II Targaryen"
+            }
+        ],
+        "fragments": [
+            "Title:got_full.txt\n\nSer Gregor Cleagne\nThe Hound\u2019s older brother and a knight of the court. Called The Mountain that Rides, Ser Gregor is even larger and crueler than the Hound himself. He is also a sore loser and a marginal commander in battle.\nOsha\nA wildling woman who becomes a ward of the Starks after trying to kidnap Bran. She is tough and strong, and she takes care of Bran after her capture, telling him stories about life in the wild and warning him about what is happening north of the Wall.\nRickon Stark"
+        ],
+        "description": "The node 'Targaryen' does not appear to be directly referenced in the provided chunks from the title \"got_full.txt.\" The chunks contain information about Ser Gregor Clegane, Osha, and Rickon Stark, but none of these characters or descriptions relate specifically to the Targaryen family or their attributes. Therefore, based solely on the information present in the chunks, I cannot provide a description of the 'Targaryen' node."
+    },
+    "Robert Baratheon": {
+        "neighbors": [
+            {
+                "predicate": "MARRIED_TO",
+                "fragment_id": [
+                    "ec2edebc-6932-579d-999e-6c4cbb22585d"
+                ],
+                "name": "Cersei Lannister"
+            },
+            {
+                "predicate": "IS_EMPLOYED_BY",
+                "fragment_id": [
+                    "ab2a860d-1790-5e4d-a05e-d3281477326a"
+                ],
+                "name": "court"
+            }
+        ],
+        "fragments": [
+            "Title:got_full.txt\n\nArya Stark\nThe youngest Stark girl and a wild, willful, but very intelligent child. What the ten-year-old Ayra lacks in her sister\u2019s refinement, she makes up for with skill in swordfighting and riding. Arya rejects the idea of a woman\u2019s role being to marry and have babies.\nCersei Lannister\nQueen of the realm and wife of Robert Baratheon. She despises Robert (as well as most other people it seems), and she is cunning and extremely ambitious.\nSer Jaime (The Kingslayer) Lannister",
+            "Title:got_full.txt\n\nVarys (The Spider)\nThe Red Keep\u2019s master of whispers and a eunuch. His role in the court is to run a network of spies and keep the king informed, and he often uses what he knows to manipulate those around him, including the king.\nRobert Baratheon\nThe corpulent king of Westeros. He loves to fight, drink, and sleep with women, and he hates the duties of ruling. He and Ned are long-time friends, and he was engaged to Ned\u2019s sister until she died.\nSer Jorah Mormont"
+        ],
+        "description": "Node: Robert Baratheon\n\nDescription:\nRobert Baratheon is characterized as the corpulent king of Westeros. He has a fondness for fighting, drinking, and engaging in affairs with women, demonstrating a neglect for the responsibilities that come with ruling. He has a long-standing friendship with Ned Stark and was once engaged to Ned's sister, who has since passed away."
+    },
+    "Brandon Stark": {
+        "neighbors": [
+            {
+                "predicate": "CHILD_OF",
+                "fragment_id": [
+                    "628ddf16-4c39-5a2f-b85e-9522cd882335"
+                ],
+                "name": "Aerys"
+            },
+            {
+                "predicate": "KILLS",
+                "fragment_id": [
+                    "628ddf16-4c39-5a2f-b85e-9522cd882335"
+                ],
+                "name": "Jaime Lannister"
+            },
+            {
+                "predicate": "CHILD_OF",
+                "fragment_id": [
+                    "628ddf16-4c39-5a2f-b85e-9522cd882335"
+                ],
+                "name": "Ned Stark"
+            }
+        ],
+        "fragments": [
+            "Title:got_full.txt\n\nRickon Stark\nThe youngest of the Stark children. Three-year-old Rickon is wild and undisciplined, as is his pet direwolf.\nAerys II Targaryen\nKing of Westeros before Robert Baratheon. He was known as The Mad King because of his cruelty. Aerys murdered Ned\u2019s older brother, Brandon Stark, in the Red Keep\u2019s throne room. At the end of the war that followed, Jaime Lannister slew Aerys in the same room.\nRhaegar Targaryen"
+        ],
+        "description": "Node: Brandon Stark\n\nBrandon Stark is mentioned as the older brother of Ned Stark. He was murdered by Aerys II Targaryen, also known as The Mad King, in the throne room of the Red Keep. His death contributed to the events leading up to Robert Baratheon's rebellion against the Targaryen dynasty."
+    },
+    "Lyanna Stark": {
+        "neighbors": [
+            {
+                "predicate": "SIBLING_OF",
+                "fragment_id": [
+                    "2d363dd6-5750-593a-b0c4-df94fde3dad0"
+                ],
+                "name": "Rhaegar"
+            },
+            {
+                "predicate": "SUPPORTS",
+                "fragment_id": [
+                    "2d363dd6-5750-593a-b0c4-df94fde3dad0"
+                ],
+                "name": "Jon Arryn"
+            }
+        ],
+        "fragments": [
+            "Title:got_full.txt\n\nRhaegar Targaryen\nThe heir to Aerys and older brother of Daenerys and Viserys. Rhaegar kidnapped Lyanna Stark, Robert\u2019s betrothed, helping to set in motion the events that led to Robert\u2019s Rebellion. The war effectively ended when Robert slew Rhaegar with his warhammer on the Trident River.\nJon Arryn\nThe recently deceased Lord of the Eyrie and Hand of the King. Jon Arryn fostered Ned Stark and Robert Baratheon at the Eyrie. When Robert became king, Jon Arryn served as his Hand until his murder."
+        ],
+        "description": "Lyanna Stark is depicted primarily through her connection to Rhaegar Targaryen. She was betrothed to Robert Baratheon, but was famously kidnapped by Rhaegar, which played a critical role in igniting Robert\u2019s Rebellion. Her kidnapping is a significant event that contributes to the overarching narrative of the series, with her name often associated with the conflict between the Starks and Targaryens. The aftermath of her abduction ultimately led to major political upheaval in Westeros, including the fall of the Targaryen dynasty. The chunks provided do not offer further details on Lyanna's character or her own actions, but her legacy is tied closely to the events surrounding her and the impact it had on key figures like Robert Baratheon and Ned Stark."
+    },
+    "Robert's Rebellion": {
+        "neighbors": [
+            {
+                "predicate": "FOUNDED",
+                "fragment_id": [
+                    "2d363dd6-5750-593a-b0c4-df94fde3dad0"
+                ],
+                "name": "Robert"
+            }
+        ],
+        "fragments": [
+            "Title:got_full.txt\n\nRhaegar Targaryen\nThe heir to Aerys and older brother of Daenerys and Viserys. Rhaegar kidnapped Lyanna Stark, Robert\u2019s betrothed, helping to set in motion the events that led to Robert\u2019s Rebellion. The war effectively ended when Robert slew Rhaegar with his warhammer on the Trident River.\nJon Arryn\nThe recently deceased Lord of the Eyrie and Hand of the King. Jon Arryn fostered Ned Stark and Robert Baratheon at the Eyrie. When Robert became king, Jon Arryn served as his Hand until his murder."
+        ],
+        "description": "Node 'Robert's Rebellion' refers to the conflict that arose in response to the kidnapping of Lyanna Stark by Rhaegar Targaryen, who was the heir to Aerys II Targaryen. This event significantly contributed to the onset of the rebellion, as Lyanna was betrothed to Robert Baratheon. The war concluded when Robert killed Rhaegar in battle at the Trident River, which played a critical role in securing his claim to the throne. \n\nAdditionally, Jon Arryn, the Lord of the Eyrie and Hand of the King, was instrumental in the events surrounding the rebellion. He had previously fostered both Ned Stark and Robert Baratheon and served as Robert's Hand until his untimely death."
+    }
+}

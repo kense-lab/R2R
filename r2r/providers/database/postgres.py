@@ -1113,6 +1113,17 @@ class PostgresRelationalDBProvider(RelationalDatabaseProvider):
             )
             sess.commit()
 
+    def get_fragments_by_id(self, fragment_ids:list[UUID]):
+        query = text(
+            f"""
+            SELECT id, metadata.text frag FROM vecs_{self.collection_name}
+            WHERE id IN :fragment_ids
+            """,
+        )
+        with self.vx.Session() as sess:
+            result = sess.execute(query, {"fragment_ids": tuple(fragment_ids)})
+            return [dict(row) for row in result]
+
 
 class PostgresDBProvider(DatabaseProvider):
     def __init__(

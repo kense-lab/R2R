@@ -25,7 +25,7 @@ class KGStoragePipe(AsyncPipe):
         self,
         kg_provider: KGProvider,
         embedding_provider: Optional[EmbeddingProvider] = None,
-        storage_batch_size: int = 1,
+        storage_batch_size: int = 100000,
         pipe_logger: Optional[KVLoggingSingleton] = None,
         type: PipeType = PipeType.INGESTOR,
         config: Optional[AsyncPipe.PipeConfig] = None,
@@ -53,7 +53,7 @@ class KGStoragePipe(AsyncPipe):
     async def store(
         self,
         kg_extractions: list[KGExtraction],
-    ) -> None:
+    ) -> list:
         """
         Stores a batch of knowledge graph extractions in the graph database.
         """
@@ -73,9 +73,9 @@ class KGStoragePipe(AsyncPipe):
                             label=entity.category,
                             embedding=embedding,
                             properties=(
-                                {"subcategory": entity.subcategory}
+                                {"subcategory": entity.subcategory, 'fragment_id': [str(extraction.fragment_id)]}
                                 if entity.subcategory
-                                else {}
+                                else {'fragment_id': [str(extraction.fragment_id)]}
                             ),
                         )
                     )
@@ -88,13 +88,16 @@ class KGStoragePipe(AsyncPipe):
                             properties={"fragment_id": [str(extraction.fragment_id)]},
                         )
                     )
-            self.kg_provider.upsert_nodes(nodes)
+            nodes = self.kg_provider.upsert_nodes(nodes)
             self.kg_provider.upsert_relations(relations)
+
+            return nodes   
+
         except Exception as e:
             error_message = f"Failed to store knowledge graph extractions in the database: {e}"
             logger.error(error_message)
             raise ValueError(error_message)
-
+        
     async def _run_logic(
         self,
         input: Input,
@@ -131,4 +134,5 @@ class KGStoragePipe(AsyncPipe):
 
         # Wait for all storage tasks to complete
         await asyncio.gather(*batch_tasks)
+
         yield None
