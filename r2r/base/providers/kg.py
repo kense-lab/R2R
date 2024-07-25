@@ -65,6 +65,15 @@ class KGProvider(ABC):
         pass
 
     @abstractmethod
+    def get_triplets(self,         
+        entity_names: Optional[list[str]] = None,
+        relation_names: Optional[list[str]] = None,
+        properties: Optional[dict] = None,
+        ids: Optional[list[str]] = None,
+    ):
+        pass
+
+    @abstractmethod
     def get_rel_map(
         self,
         subjs: Optional[list[str]] = None,
