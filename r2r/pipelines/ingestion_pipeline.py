@@ -111,27 +111,6 @@ class IngestionPipeline(AsyncPipeline):
             if self.kg_pipeline:
                 results["kg_pipeline_output"] = await kg_task
 
-
-            # run deduplication task here
-            if self.kg_pipeline:
-                
-                # run deduplication task here
-                deduplication_task = asyncio.create_task(
-                    self.kg_pipeline.run_deduplication(
-                        results["kg_pipeline_output"],
-                        state,
-                        stream,
-                        run_manager,
-                        log_run_info=False,  # Do not log run info since we have already done so
-                        *args,
-                        **kwargs,
-                    )
-                )
-                results["deduplication_output"] = await deduplication_task
-                
-
-            return results
-
     def add_pipe(
         self,
         pipe: AsyncPipe,

@@ -17,6 +17,7 @@ from r2r.pipelines import (
     IngestionPipeline,
     RAGPipeline,
     SearchPipeline,
+    KGEntityMergingPipeline
 )
 
 from ..app import R2RApp
@@ -87,12 +88,14 @@ class R2RBuilder:
         self.kg_pipe_override: Optional[AsyncPipe] = None
         self.kg_storage_pipe_override: Optional[AsyncPipe] = None
         self.kg_agent_pipe_override: Optional[AsyncPipe] = None
+        self.kg_entity_merging_pipe_override: Optional[AsyncPipe] = None
 
         # Pipeline overrides
         self.ingestion_pipeline: Optional[IngestionPipeline] = None
         self.search_pipeline: Optional[SearchPipeline] = None
         self.rag_pipeline: Optional[RAGPipeline] = None
         self.streaming_rag_pipeline: Optional[RAGPipeline] = None
+        self.kg_entity_merging_pipeline: Optional[KGEntityMergingPipeline] = None
         self.eval_pipeline: Optional[EvalPipeline] = None
 
     def with_app(self, app: Type[R2REngine]):
@@ -184,6 +187,10 @@ class R2RBuilder:
     def with_kg_agent_pipe(self, pipe: AsyncPipe):
         self.kg_agent_pipe_override = pipe
         return self
+    
+    def with_kg_entity_merging_pipe(self, pipe: AsyncPipe):
+        self.kg_entity_merging_pipe_override = pipe
+        return self
 
     # Pipeline override methods
     def with_ingestion_pipeline(self, pipeline: IngestionPipeline):
@@ -200,6 +207,10 @@ class R2RBuilder:
 
     def with_streaming_rag_pipeline(self, pipeline: RAGPipeline):
         self.streaming_rag_pipeline = pipeline
+        return self
+    
+    def with_kg_entity_merging_pipeline(self, pipeline: KGEntityMergingPipeline):
+        self.kg_entity_merging_pipeline = pipeline
         return self
 
     def with_eval_pipeline(self, pipeline: EvalPipeline):
@@ -235,6 +246,7 @@ class R2RBuilder:
             kg_pipe_override=self.kg_pipe_override,
             kg_storage_pipe_override=self.kg_storage_pipe_override,
             kg_agent_pipe_override=self.kg_agent_pipe_override,
+            kg_entity_merging_pipe_override=self.kg_entity_merging_pipe_override
             *args,
             **kwargs,
         )
@@ -244,6 +256,7 @@ class R2RBuilder:
             search_pipeline=self.search_pipeline,
             rag_pipeline=self.rag_pipeline,
             streaming_rag_pipeline=self.streaming_rag_pipeline,
+            kg_entity_merging_pipeline=self.kg_entity_merging_pipeline,
             eval_pipeline=self.eval_pipeline,
             *args,
             **kwargs,

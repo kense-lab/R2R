@@ -188,7 +188,7 @@ class EmbeddingPipe(AsyncPipe):
 
                 version = fragment.metadata.get("version", "v0")
 
-                # Ensure fragment ID is set correctly
+                # Ensure fragment ID is set cortly
                 if not fragment.id:
                     fragment.id = generate_id_from_label(
                         f"{extraction.id}-{fragment_info[extraction.document_id]}-{version}"

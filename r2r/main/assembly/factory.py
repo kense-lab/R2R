@@ -25,6 +25,7 @@ from r2r.pipelines import (
     IngestionPipeline,
     RAGPipeline,
     SearchPipeline,
+    KGEntityMergingPipeline
 )
 
 from ..abstractions import R2RPipelines, R2RPipes, R2RProviders
@@ -294,6 +295,7 @@ class R2RPipeFactory:
         vector_search_pipe_override: Optional[AsyncPipe] = None,
         rag_pipe_override: Optional[AsyncPipe] = None,
         streaming_rag_pipe_override: Optional[AsyncPipe] = None,
+        kg_entity_merging_pipe_override: Optional[AsyncPipe] = None, 
         eval_pipe_override: Optional[AsyncPipe] = None,
         *args,
         **kwargs,
@@ -318,6 +320,7 @@ class R2RPipeFactory:
             or self.create_rag_pipe(*args, **kwargs),
             streaming_rag_pipe=streaming_rag_pipe_override
             or self.create_rag_pipe(stream=True, *args, **kwargs),
+            
             eval_pipe=eval_pipe_override
             or self.create_eval_pipe(*args, **kwargs),
         )
@@ -556,6 +559,12 @@ class R2RPipelineFactory:
             eval_pipeline=eval_pipeline
             or self.create_eval_pipeline(*args, **kwargs),
         )
+
+    def create_entity_merging_pipeline(
+            self, *args, **kwargs
+    ) -> KGEntityMergingPipeline:
+        kg_entity_merging_pipeilne = KGEntityMergingPipeline()
+        kg_entity_merging_pipeilne.add_pipe(self.pipes)
 
     def configure_logging(self):
         KVLoggingSingleton.configure(self.config.logging)

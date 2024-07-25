@@ -17,6 +17,7 @@ from r2r.pipelines import (
     IngestionPipeline,
     RAGPipeline,
     SearchPipeline,
+    KGEntityMergingPipeline
 )
 
 
@@ -44,6 +45,7 @@ class R2RPipes(BaseModel):
     kg_pipe: Optional[AsyncPipe]
     kg_storage_pipe: Optional[AsyncPipe]
     kg_agent_search_pipe: Optional[AsyncPipe]
+    kg_entity_merging_pipe: Optional[AsyncPipe]
 
     class Config:
         arbitrary_types_allowed = True
@@ -55,6 +57,7 @@ class R2RPipelines(BaseModel):
     search_pipeline: SearchPipeline
     rag_pipeline: RAGPipeline
     streaming_rag_pipeline: RAGPipeline
+    kg_entity_merging_pipeline: KGEntityMergingPipeline
 
     class Config:
         arbitrary_types_allowed = True

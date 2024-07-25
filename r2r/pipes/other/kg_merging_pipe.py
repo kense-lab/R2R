@@ -61,74 +61,13 @@ class KGMergingePipe(AsyncPipe):
         self.llm_provider = LLMProvider
         self.storage_batch_size = storage_batch_size
 
-    # async def store(
-    #     self,
-    #     kg_extractions: list[KGExtraction],
-    # ) -> list:
-    #     """
-    #     Stores a batch of knowledge graph extractions in the graph database.
-    #     """
-    #     try:
-    #         nodes = []
-    #         relations = []
-    #         for extraction in kg_extractions:
-    #             for entity in extraction.entities.values():
-    #                 embedding = None
-    #                 if self.embedding_provider:
-    #                     embedding = self.embedding_provider.get_embedding(
-    #                         "Entity:\n{entity.value}\nLabel:\n{entity.category}\nSubcategory:\n{entity.subcategory}"
-    #                     )
-    #                 nodes.append(
-    #                     EntityNode(
-    #                         name=entity.value,
-    #                         label=entity.category,
-    #                         embedding=embedding,
-    #                         properties=(
-    #                             {"subcategory": entity.subcategory, 'fragment_id': [str(extraction.fragment_id)]}
-    #                             if entity.subcategory
-    #                             else {'fragment_id': [str(extraction.fragment_id)]}
-    #                         ),
-    #                     )
-    #                 )
-    #             for triple in extraction.triples:
-    #                 relations.append(
-    #                     Relation(
-    #                         source_id=triple.subject,
-    #                         target_id=triple.object,
-    #                         label=triple.predicate,
-    #                         properties={"fragment_id": [str(extraction.fragment_id)]},
-    #                     )
-    #                 )
-    #         nodes = self.kg_provider.upsert_nodes(nodes)
-    #         self.kg_provider.upsert_relations(relations)
-
-    #         return nodes   
-
-    #     except Exception as e:
-    #         error_message = f"Failed to store knowledge graph extractions in the database: {e}"
-    #         logger.error(error_message)
-    #         raise ValueError(error_message)
-
-    def flatten_list(self, lst):
-        out = []
-        for elem in lst:
-            if type(elem) == list:
-                out.extend(self.flatten_list(elem))
-            else: 
-                out.append(elem)
-        return out
-
-    async def add_descriptions(self, entities: list[EntityNode]) -> None:
+    async def deduplicate_entities(self, entities: list[EntityNode]) -> None:
         """
         Adds descriptions to the entities in the knowledge graph.
         """
 
         entity_names = [entity.name for entity in entities]
 
-        # source_id, source_type, type, target_id, target_type, 
-        #         source_properties, target_properties, 
-        #         source_label_properties, target_label_properties,
-        #         relationship_properties
         triplets = self.kg_provider.get_triplets(entities = entity_names)
 
         fragment_ids_dict = {}
@@ -140,11 +79,10 @@ class KGMergingePipe(AsyncPipe):
         # now db query
         flatten = lambda *n: (e for a in n for e in (flatten(*a) if isinstance(a, (tuple, list)) else (a,)))
 
-
         entity_descriptions = {}
         for name, fragment_ids in fragment_ids_dict:
 
-            fragment_ids = list(set(self.flatten_list(fragment_ids)))
+            fragment_ids = list(set(flatten(fragment_ids)))
 
             fragments = self.database_provider.get_fragments_by_id(fragment_ids)
 
@@ -207,15 +145,6 @@ class KGMergingePipe(AsyncPipe):
         batch_tasks = []
         kg_batch = []
 
-
-        # get all graph nodes
-        nodes = self.kg_provider.get_nodes()
-
-        # 
-
-        node_descriptions = self.llm_provider.get_node_descriptions()
-
-
-        await asyncio.gather(*batch_tasks)
-
+        entities = self.kg_provider.get_nodes()
+        merged_entities = self.deduplicate_entities(entities)
         yield None
