@@ -1,8 +1,4 @@
 {
-  "app": {
-    "max_logs_per_request": 100,
-    "max_file_size_in_mb": 32
-  },
   "auth": {
     "provider": "r2r",
     "access_token_lifetime_in_minutes": 60,
@@ -18,15 +14,9 @@
       "model": "gpt-4o",
       "temperature": 0.1,
       "top_p": 1.0,
-      "top_k": 100,
       "max_tokens_to_sample": 1024,
       "stream": false,
-      "functions": null,
-      "skip_special_tokens": false,
-      "stop_token": null,
-      "num_beams": 1,
-      "do_sample": true,
-      "generate_with_chat": false,
+      "tools": null,
       "add_generation_kwargs": {},
       "api_base": null
     }
@@ -56,6 +46,12 @@
   "ingestion":{
     "excluded_parsers": [
       "mp4"
+    ],
+    "override_parsers": [
+      {
+        "document_type": "pdf",
+        "parser": "PDFParser"
+      }
     ]
   },
   "logging": {

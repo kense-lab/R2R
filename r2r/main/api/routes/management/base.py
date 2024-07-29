@@ -1,9 +1,8 @@
 from fastapi import Depends
+from pydantic import BaseModel
 
 from r2r.base import R2RException
-
-from ...engine import R2REngine
-from ..requests import (
+from r2r.main.api.routes.management.requests import (
     R2RAnalyticsRequest,
     R2RDeleteRequest,
     R2RDocumentChunksRequest,
@@ -13,7 +12,9 @@ from ..requests import (
     R2RUpdatePromptRequest,
     R2RUsersOverviewRequest,
 )
-from .base_router import BaseRouter
+
+from ....engine import R2REngine
+from ..base_router import BaseRouter
 
 
 class ManagementRouter(BaseRouter):
@@ -110,15 +111,15 @@ class ManagementRouter(BaseRouter):
 
             if not chunks:
                 raise R2RException(
-                    "Only a superuser can call the `document_chunks` endpoint.",
-                    500,
+                    "No chunks found for the given document ID.",
+                    404,
                 )
 
-            is_owner = chunks[0].get("user_id") == auth_user.id
+            is_owner = str(chunks[0].get("user_id")) == str(auth_user.id)
 
             if not is_owner and not auth_user.is_superuser:
                 raise R2RException(
-                    "Only a superuser can call the `document_chunks` endpoint.",
+                    "Only a superuser can arbitrarily call document_chunks.",
                     403,
                 )
 
@@ -185,3 +186,8 @@ class ManagementRouter(BaseRouter):
                     403,
                 )
             return await self.engine.aapp_settings()
+
+
+class R2RExtractionRequest(BaseModel):
+    entity_types: list[str]
+    relations: list[str]

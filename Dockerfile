@@ -20,6 +20,11 @@ RUN poetry config virtualenvs.create false \
 # Create the final image
 FROM python:3.10-slim
 
+# Install healthcheck dependency
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends curl \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
 WORKDIR /app
 
 # Copy the installed packages from the builder
@@ -29,6 +34,7 @@ COPY --from=builder /usr/local/bin /usr/local/bin
 # Copy the application and config
 COPY r2r /app/r2r
 COPY r2r.json /app/r2r.json
+COPY pyproject.toml /app/pyproject.toml
 
 # Expose the port
 EXPOSE 8000

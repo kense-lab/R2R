@@ -3,9 +3,14 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from pydantic import BaseModel
 
 from r2r.base import Token, User, UserCreate
+from r2r.main.api.routes.auth.requests import (
+    PasswordChangeRequest,
+    PasswordResetConfirmRequest,
+    PasswordResetRequest,
+)
 
-from ...engine import R2REngine
-from .base_router import BaseRouter
+from ....engine import R2REngine
+from ..base_router import BaseRouter
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
@@ -16,19 +21,6 @@ class UserResponse(BaseModel):
 
 class TokenResponse(BaseModel):
     results: dict[str, Token]
-
-
-class PasswordChangeRequest(BaseModel):
-    current_password: str
-    new_password: str
-
-
-class PasswordResetRequest(BaseModel):
-    email: str
-
-
-class PasswordResetConfirmRequest(BaseModel):
-    new_password: str
 
 
 class UserProfileUpdate(BaseModel):
@@ -69,9 +61,6 @@ class AuthRouter(BaseRouter):
         ):
             return auth_user
 
-        @self.router.post(
-            "/refresh_access_token", response_model=TokenResponse
-        )
         @self.router.put("/user", response_model=UserResponse)
         @self.base_endpoint
         async def put_user_app(
@@ -82,6 +71,9 @@ class AuthRouter(BaseRouter):
                 auth_user.id, profile_update.dict(exclude_unset=True)
             )
 
+        @self.router.post(
+            "/refresh_access_token", response_model=TokenResponse
+        )
         @self.base_endpoint
         async def refresh_access_token_app(
             refresh_token: str = Body(..., embed=True),

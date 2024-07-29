@@ -1,5 +1,4 @@
 import logging
-import os
 from abc import abstractmethod
 from pathlib import Path
 from typing import Any, Optional
@@ -14,14 +13,7 @@ class PromptConfig(ProviderConfig):
     default_task_name: Optional[str] = "default_rag"
 
     # TODO - Replace this with a database
-    file_path: Path = os.path.join(
-        os.path.dirname(__file__),
-        "..",
-        "..",
-        "providers",
-        "prompts",
-        "defaults.jsonl",
-    )
+    file_path: Optional[Path] = None
 
     def validate(self) -> None:
         pass
