@@ -25,6 +25,7 @@ class IngestionPipeline(AsyncPipeline):
         self.parsing_pipe = None
         self.embedding_pipeline = None
         self.kg_pipeline = None
+        self.kg_merging_pipeline = None
 
     async def run(
         self,
@@ -103,13 +104,30 @@ class IngestionPipeline(AsyncPipeline):
 
             # Wait for the enqueueing task to complete
             await enqueue_task
-
+        
             results = {}
             # Wait for the embedding and KG tasks to complete
             if self.embedding_pipeline:
                 results["embedding_pipeline_output"] = await embedding_task
             if self.kg_pipeline:
                 results["kg_pipeline_output"] = await kg_task
+
+            if self.kg_merging_pipeline: 
+                task = asyncio.create_task(
+                    self.kg_merging_pipeline.run(
+                        results,
+                        state,
+                        stream,
+                        run_manager,
+                        log_run_info=False,
+                        *args,
+                        **kwargs,
+                    )
+                )
+
+                results["kg_merging_pipeline_output"] = await task
+
+            return results
 
     def add_pipe(
         self,
@@ -133,6 +151,12 @@ class IngestionPipeline(AsyncPipeline):
             self.kg_pipeline.add_pipe(
                 pipe, add_upstream_outputs, *args, **kwargs
             )
+            if not self.kg_merging_pipeline:
+                self.kg_merging_pipeline = AsyncPipeline()
+            self.kg_merging_pipeline.add_pipe(
+                pipe, add_upstream_outputs, *args, **kwargs
+            )
+
         elif embedding_pipe:
             if not self.embedding_pipeline:
                 self.embedding_pipeline = AsyncPipeline()

@@ -145,6 +145,6 @@ class KGMergingePipe(AsyncPipe):
         batch_tasks = []
         kg_batch = []
 
-        entities = self.kg_provider.get_nodes()
+        entities = self.kg_provider.get_nodes_by_document_id(document_ids = input.message)
         merged_entities = self.deduplicate_entities(entities)
         yield None

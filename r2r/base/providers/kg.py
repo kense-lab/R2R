@@ -148,6 +148,12 @@ class KGProvider(ABC):
         """Abstract method to update the KG agent prompt."""
         pass
 
+    @abstractmethod
+    def get_nodes_by_document_id(self, document_ids: list[str]):
+        """Get nodes by document id."""
+        pass
+
+
 def escape_braces(s: str) -> str:
     """
     Escape braces in a string.

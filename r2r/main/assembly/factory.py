@@ -520,6 +520,13 @@ class R2RPipelineFactory:
         eval_pipeline = EvalPipeline()
         eval_pipeline.add_pipe(self.pipes.eval_pipe)
         return eval_pipeline
+    
+
+    def create_entity_merging_pipeline(
+            self, *args, **kwargs
+    ) -> KGEntityMergingPipeline:
+        kg_entity_merging_pipeilne = KGEntityMergingPipeline()
+        kg_entity_merging_pipeilne.add_pipe(self.pipes)
 
     def create_pipelines(
         self,
@@ -528,6 +535,7 @@ class R2RPipelineFactory:
         rag_pipeline: Optional[RAGPipeline] = None,
         streaming_rag_pipeline: Optional[RAGPipeline] = None,
         eval_pipeline: Optional[EvalPipeline] = None,
+        kg_entity_merging_pipeline: Optional[KGEntityMergingPipeline] = None, 
         *args,
         **kwargs,
     ) -> R2RPipelines:
@@ -558,13 +566,9 @@ class R2RPipelineFactory:
             ),
             eval_pipeline=eval_pipeline
             or self.create_eval_pipeline(*args, **kwargs),
+            kg_entity_merging_pipeline = kg_entity_merging_pipeline 
+            or self.create_entity_merging_pipeline(*args, **kwargs)
         )
-
-    def create_entity_merging_pipeline(
-            self, *args, **kwargs
-    ) -> KGEntityMergingPipeline:
-        kg_entity_merging_pipeilne = KGEntityMergingPipeline()
-        kg_entity_merging_pipeilne.add_pipe(self.pipes)
 
     def configure_logging(self):
         KVLoggingSingleton.configure(self.config.logging)

@@ -146,7 +146,6 @@ class KGExtractionPipe(AsyncPipe):
                 triples = extract_triples(llm_payload, entities)
 
                 # Create KG extraction object
-                print(fragment.id)
                 return KGExtraction(entities=entities, triples=triples, fragment_id=fragment.id)
             except (
                 ClientError,

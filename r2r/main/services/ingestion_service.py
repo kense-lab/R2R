@@ -509,3 +509,11 @@ class IngestionService(Service):
             raise R2RException(
                 status_code=400, message=f"Error processing form data: {e}"
             )
+
+    # @staticmethod
+    def kg_entity_deduplication(
+        metadatas: Optional[str] = Form(None),
+        document_ids: str = Form(None),
+        versions: Optional[str] = Form(None),
+    ):
+        # just call update kg on the pipelines  

@@ -983,6 +983,19 @@ class Neo4jKGProvider(PropertyGraphStore, KGProvider):
                 "\n".join(formatted_rels),
             ]
         )
+    
+    def get_nodes_by_document_id(self, document_ids: List[str]):
+        import pdb; pdb.set_trace()
+        return self.structured_query(
+            """
+            MATCH (e:`__Entity__`)
+            WHERE e.triplet_source_id IN $document_ids
+            RETURN e.id AS name,
+               [l in labels(e) WHERE l <> '__Entity__' | l][0] AS type,
+               e{.* , embedding: Null, id: Null} AS properties
+            """,
+            param_map={"document_ids": document_ids},
+        )
 
     def update_extraction_prompt(
         self,

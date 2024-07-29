@@ -268,7 +268,6 @@ def ingest_files(obj, file_paths, document_ids, metadatas, versions):
     click.echo(f"Time taken to ingest files: {t1 - t0:.2f} seconds")
     click.echo(response)
 
-
 @cli.command()
 @click.argument("file-paths", nargs=-1)
 @click.option(
