@@ -73,10 +73,9 @@ class VectorDatabaseProvider(Provider, ABC):
         pass
 
     @abstractmethod
-    def delete_by_metadata(
+    def delete_vectors(
         self,
-        metadata_fields: list[str],
-        metadata_values: list[Union[bool, int, str]],
+        filters: Optional[dict[str, Union[bool, int, str]]] = None,
     ) -> list[str]:
         pass
 

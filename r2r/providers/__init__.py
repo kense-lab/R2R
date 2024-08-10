@@ -1,7 +1,13 @@
 from .auth import R2RAuthProvider
 from .chunking import R2RChunkingProvider, UnstructuredChunkingProvider
 from .crypto import BCryptConfig, BCryptProvider
-from .database import PostgresDBProvider
+from .database import (
+    IndexArgsHNSW,
+    IndexArgsIVFFlat,
+    IndexMeasure,
+    IndexMethod,
+    PostgresDBProvider,
+)
 from .embeddings import (
     LiteLLMEmbeddingProvider,
     OllamaEmbeddingProvider,
@@ -30,4 +36,8 @@ __all__ = [
     "UnstructuredParsingProvider",
     "R2RChunkingProvider",
     "UnstructuredChunkingProvider",
+    "IndexMeasure",
+    "IndexMethod",
+    "IndexArgsIVFFlat",
+    "IndexArgsHNSW",
 ]

@@ -36,6 +36,7 @@ from sqlalchemy import (
     delete,
     distinct,
     func,
+    not_,
     or_,
     select,
     text,
@@ -588,7 +589,9 @@ class Collection:
                         sess.execute(delete_stmt)
 
                 if filters:
-                    meta_filter = build_filters(self.table.c.metadata, filters)
+                    meta_filter = self.build_filters(
+                        self.table.c.metadata, filters
+                    )
                     stmt = select(self.table.c.metadata).where(meta_filter)
                     results = sess.execute(stmt).fetchall()
                     for result in results:
@@ -723,7 +726,7 @@ class Collection:
         stmt = select(*cols)
         if filters:
             stmt = stmt.filter(
-                build_filters(self.table.c.metadata, filters)  # type: ignore
+                self.build_filters(self.table.c.metadata, filters)  # type: ignore
             )
 
         stmt = stmt.order_by(distance_clause)
@@ -1008,99 +1011,83 @@ class Collection:
 
         return None
 
+    @staticmethod
+    def build_filters(json_col: Column, filters: Dict):
+        if not isinstance(filters, dict):
+            raise FilterError("filters must be a dict")
 
-def build_filters(json_col: Column, filters: Dict):
-    """
-    Builds filters for SQL query based on provided dictionary.
-
-    Args:
-        json_col (Column): The column in the database table.
-        filters (Dict): The dictionary specifying filter conditions.
-
-    Raises:
-        FilterError: If filter conditions are not correctly formatted.
-
-    Returns:
-        The filter clause for the SQL query.
-    """
-    if not isinstance(filters, dict):
-        raise FilterError("filters must be a dict")
-
-    filter_clauses = []
-
-    for key, value in filters.items():
-        if not isinstance(key, str):
-            raise FilterError("*filters* keys must be strings")
-
-        if isinstance(value, dict):
-            if len(value) > 1:
-                raise FilterError("only one operator permitted per key")
-            for operator, clause in value.items():
-                if operator not in (
-                    "$eq",
-                    "$ne",
-                    "$lt",
-                    "$lte",
-                    "$gt",
-                    "$gte",
-                    "$in",
-                ):
-                    raise FilterError("unknown operator")
-
-                if operator == "$eq" and not hasattr(clause, "__len__"):
-                    contains_value = cast({key: clause}, postgresql.JSONB)
-                    filter_clauses.append(json_col.op("@>")(contains_value))
-                elif operator == "$in":
-                    if not isinstance(clause, list):
-                        raise FilterError(
-                            "argument to $in filter must be a list"
-                        )
-                    for elem in clause:
-                        if not isinstance(elem, (int, str, float)):
-                            raise FilterError(
-                                "argument to $in filter must be a list of scalars"
+        def parse_condition(condition):
+            if isinstance(condition, dict):
+                for key, value in condition.items():
+                    if key == "term":
+                        field, term = next(iter(value.items()))
+                        return json_col[field].astext == str(term)
+                    elif key == "range":
+                        field, range_values = next(iter(value.items()))
+                        clauses = []
+                        if "gte" in range_values:
+                            clauses.append(
+                                json_col[field].astext.cast(Float)
+                                >= range_values["gte"]
                             )
-                    contains_value = [
-                        cast(elem, postgresql.JSONB) for elem in clause
-                    ]
-                    filter_clauses.append(
-                        json_col.op("->")(key).in_(contains_value)
-                    )
-                else:
-                    matches_value = cast(clause, postgresql.JSONB)
-                    if operator == "$eq":
-                        filter_clauses.append(
-                            json_col.op("->")(key) == matches_value
-                        )
-                    elif operator == "$ne":
-                        filter_clauses.append(
-                            json_col.op("->")(key) != matches_value
-                        )
-                    elif operator == "$lt":
-                        filter_clauses.append(
-                            json_col.op("->")(key) < matches_value
-                        )
-                    elif operator == "$lte":
-                        filter_clauses.append(
-                            json_col.op("->")(key) <= matches_value
-                        )
-                    elif operator == "$gt":
-                        filter_clauses.append(
-                            json_col.op("->")(key) > matches_value
-                        )
-                    elif operator == "$gte":
-                        filter_clauses.append(
-                            json_col.op("->")(key) >= matches_value
-                        )
-                    else:
-                        raise Unreachable()
-        else:
-            raise FilterError("Filter value must be a dict with an operator")
+                        if "gt" in range_values:
+                            clauses.append(
+                                json_col[field].astext.cast(Float)
+                                > range_values["gt"]
+                            )
+                        if "lte" in range_values:
+                            clauses.append(
+                                json_col[field].astext.cast(Float)
+                                <= range_values["lte"]
+                            )
+                        if "lt" in range_values:
+                            clauses.append(
+                                json_col[field].astext.cast(Float)
+                                < range_values["lt"]
+                            )
+                        return and_(*clauses)
+            elif isinstance(condition, tuple):
+                field, value = condition
+                return json_col[field].astext == str(value)
+            raise FilterError("Unsupported condition type")
 
-    if len(filter_clauses) == 1:
-        return filter_clauses[0]
-    else:
-        return and_(*filter_clauses)
+        def parse_bool_query(bool_query):
+            clauses = []
+            if "must" in bool_query:
+                clauses.append(
+                    and_(*[parse_condition(c) for c in bool_query["must"]])
+                )
+            if "should" in bool_query:
+                clauses.append(
+                    or_(*[parse_condition(c) for c in bool_query["should"]])
+                )
+            if "must_not" in bool_query:
+                clauses.append(
+                    not_(
+                        and_(
+                            *[
+                                parse_condition(c)
+                                for c in bool_query["must_not"]
+                            ]
+                        )
+                    )
+                )
+            if "filter" in bool_query:
+                clauses.append(
+                    and_(*[parse_condition(c) for c in bool_query["filter"]])
+                )
+            return and_(*clauses)
+
+        if "query" in filters and "bool" in filters["query"]:
+            return parse_bool_query(filters["query"]["bool"])
+        else:
+            # Handle simple key-value filters
+            return and_(
+                *[
+                    parse_condition((key, value))
+                    for key, value in filters.items()
+                ]
+            )
 
 
 def build_table(name: str, meta: MetaData, dimension: int) -> Table:

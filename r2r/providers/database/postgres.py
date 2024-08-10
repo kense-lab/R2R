@@ -6,6 +6,8 @@ from datetime import datetime, timedelta
 from typing import Literal, Optional, Union
 from uuid import UUID
 
+from sqlalchemy import asc as sa_asc
+from sqlalchemy import desc as sa_desc
 from sqlalchemy import exc, text
 from sqlalchemy.engine.url import make_url
 
@@ -28,6 +30,14 @@ from r2r.base.abstractions.user import UserStats
 from .vecs import Client, Collection, create_client
 
 logger = logging.getLogger(__name__)
+
+
+def desc(field):
+    return sa_desc(text(f"metadata->'{field}'"))
+
+
+def asc(field):
+    return sa_asc(text(f"metadata->'{field}'"))
 
 
 class PostgresVectorDBProvider(VectorDatabaseProvider):
@@ -344,38 +354,113 @@ class PostgresVectorDBProvider(VectorDatabaseProvider):
     def search(
         self,
         query_vector: list[float],
-        filters: dict[str, Union[bool, int, str]] = {},
+        filters: dict = {},
         limit: int = 10,
+        _source: Union[bool, list[str]] = True,
+        sort: Optional[list[dict]] = None,
         *args,
         **kwargs,
-    ) -> list[VectorSearchResult]:
+    ) -> dict:
         if self.collection is None:
             raise ValueError(
                 "Please call `initialize_collection` before attempting to run `search`."
             )
         measure = kwargs.get("measure", "cosine_distance")
-        mapped_filters = {
-            key: {"$eq": value} for key, value in filters.items()
-        }
+
+        # Handle _source parameter
+        include_metadata = _source is not False
+        if isinstance(_source, list):
+            include_metadata = _source
+
+        # Convert filters to the format expected by vecs
+        vecs_filters = self._convert_filters(filters)
+
+        results = self.collection.query(
+            query_vector,
+            limit=limit,
+            filters=vecs_filters,
+            measure=measure,
+            include_metadata=include_metadata,
+            include_value=True,
+        )
+
+        # Handle sorting if supported (this might need to be done post-query)
+        if sort:
+            results = self._sort_results(results, sort)
 
         return [
-            VectorSearchResult(id=ele[0], score=float(1 - ele[1]), metadata=ele[2])  # type: ignore
-            for ele in self.collection.query(
-                data=query_vector,
-                limit=limit,
-                filters=mapped_filters,
-                measure=measure,
-                include_value=True,
-                include_metadata=True,
+            VectorSearchResult(
+                id=ele[0], score=float(1 - ele[1]), metadata=ele[2]
             )
+            for ele in results
         ]
+
+    def _convert_filters(self, filters: dict) -> dict:
+        if "query" in filters and "bool" in filters["query"]:
+            bool_query = filters["query"]["bool"]
+            vecs_filters = {"$and": []}
+
+            if "must" in bool_query:
+                must_filters = self._process_conditions(bool_query["must"])
+                vecs_filters["$and"].extend(must_filters)
+
+            if "should" in bool_query:
+                raise NotImplementedError(
+                    "Should queries are not supported in vecs."
+                )
+
+            if "must_not" in bool_query:
+                must_not_filters = self._process_conditions(
+                    bool_query["must_not"]
+                )
+                vecs_filters["$and"].append(
+                    {"$not": {"$or": must_not_filters}}
+                )
+
+            return vecs_filters
+        else:
+            return filters  # Return as-is if not in Elasticsearch format
+
+    def _process_conditions(self, conditions):
+        processed_filters = []
+        for condition in conditions:
+            if "term" in condition:
+                for field, value in condition["term"].items():
+                    processed_filters.append({field: {"$eq": value}})
+            elif "range" in condition:
+                for field, range_values in condition["range"].items():
+                    range_filter = {}
+                    for op, value in range_values.items():
+                        if op == "gte":
+                            range_filter["$gte"] = value
+                        elif op == "gt":
+                            range_filter["$gt"] = value
+                        elif op == "lte":
+                            range_filter["$lte"] = value
+                        elif op == "lt":
+                            range_filter["$lt"] = value
+                    processed_filters.append({field: range_filter})
+        return processed_filters
+
+    def _sort_results(self, results: list, sort: list[dict]) -> list:
+        for sort_item in reversed(sort):
+            for field, direction in sort_item.items():
+                reverse = direction.lower() == "desc"
+                results = sorted(
+                    results,
+                    key=lambda x: x.metadata.get(field, 0),
+                    reverse=reverse,
+                )
+        return results
 
     def hybrid_search(
         self,
         query_text: str,
         query_vector: list[float],
         limit: int = 10,
-        filters: Optional[dict[str, Union[bool, int, str]]] = None,
+        filters: Optional[dict] = None,
+        _source: Union[bool, list[str]] = True,
+        sort: Optional[list[dict]] = None,
         full_text_weight: float = 1.0,
         semantic_weight: float = 1.0,
         rrf_k: int = 20,
@@ -388,34 +473,58 @@ class PostgresVectorDBProvider(VectorDatabaseProvider):
             )
 
         # Convert filters to a JSON-compatible format
-        filter_condition = None
-        if filters:
-            filter_condition = json.dumps(filters)
+        filter_condition = json.dumps(filters) if filters else None
+
+        # Prepare source filtering
+        if isinstance(_source, list):
+            source_fields = ", ".join(_source)
+        elif _source is True:
+            source_fields = "*"
+        else:
+            source_fields = "NULL"
+
+        # Prepare sorting
+        if sort:
+            sort_clause = ", ".join(
+                [
+                    f"{field} {direction}"
+                    for item in sort
+                    for field, direction in item.items()
+                ]
+            )
+        else:
+            sort_clause = "1"  # Default sorting
 
         query = text(
             f"""
-            SELECT * FROM hybrid_search_{self.collection_name}(
+            SELECT id, score, ({source_fields}) as source
+            FROM hybrid_search_{self.collection_name}(
                 cast(:query_text as TEXT), cast(:query_embedding as VECTOR), cast(:match_limit as INT),
                 cast(:full_text_weight as FLOAT), cast(:semantic_weight as FLOAT), cast(:rrf_k as INT),
                 cast(:filter_condition as JSONB)
             )
+            ORDER BY {sort_clause}
+            LIMIT :limit
         """
         )
 
         params = {
             "query_text": str(query_text),
             "query_embedding": list(query_vector),
-            "match_limit": limit,
+            "match_limit": limit
+            * 2,  # Fetch more results to allow for sorting
             "full_text_weight": full_text_weight,
             "semantic_weight": semantic_weight,
             "rrf_k": rrf_k,
             "filter_condition": filter_condition,
+            "limit": limit,
         }
 
         with self.vx.Session() as session:
             result = session.execute(query, params).fetchall()
+
         return [
-            VectorSearchResult(id=row[0], score=1.0, metadata=row[-1])
+            VectorSearchResult(id=row[0], score=row[1], metadata=row[2])
             for row in result
         ]
 
@@ -424,38 +533,17 @@ class PostgresVectorDBProvider(VectorDatabaseProvider):
 
     def delete_by_metadata(
         self,
-        metadata_fields: list[str],
-        metadata_values: list[Union[bool, int, str]],
-        logic: Literal["AND", "OR"] = "AND",
+        filters: dict,
     ) -> list[str]:
-        if logic == "OR":
-            raise ValueError(
-                "OR logic is still being tested before official support for `delete_by_metadata` in pgvector."
-            )
         if self.collection is None:
             raise ValueError(
                 "Please call `initialize_collection` before attempting to run `delete_by_metadata`."
             )
 
-        if len(metadata_fields) != len(metadata_values):
-            raise ValueError(
-                "The number of metadata fields must match the number of metadata values."
-            )
+        # Convert filters to the format expected by vecs
+        vecs_filters = self._convert_filters(filters)
 
-        # Construct the filter
-        if logic == "AND":
-            filters = {
-                k: {"$eq": v} for k, v in zip(metadata_fields, metadata_values)
-            }
-        else:  # OR logic
-            # TODO - Test 'or' logic and remove check above
-            filters = {
-                "$or": [
-                    {k: {"$eq": v}}
-                    for k, v in zip(metadata_fields, metadata_values)
-                ]
-            }
-        return self.collection.delete(filters=filters)
+        return self.collection.delete(filters=vecs_filters)
 
     def get_metadatas(
         self,

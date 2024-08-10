@@ -35,8 +35,8 @@ class TestGroupManagement(BaseTest):
             "create_groups": self.create_groups_test,
             "add_users_to_groups": self.add_users_to_groups_test,
             "group_based_document_access": self.group_based_document_access_test,
-            # "admin_ingest_documents": self.admin_ingest_documents_test,
-            # "user_ingest_and_search": self.user_ingest_and_search_test,
+            "admin_ingest_documents": self.admin_ingest_documents_test,
+            "user_ingest_and_search": self.user_ingest_and_search_test,
             # "cleanup": self.cleanup_test
         }
 
@@ -53,6 +53,7 @@ class TestGroupManagement(BaseTest):
             )
             self.group_id_1 = group_1["results"]["id"]
             self.group_id_2 = group_2["results"]["id"]
+            client.logout()
             return {"group_1": group_1, "group_2": group_2}
         except Exception as e:
             return {"error": str(e)}
@@ -65,6 +66,8 @@ class TestGroupManagement(BaseTest):
             user_2 = client.register(self.user_email_2, self.user_password)
             self.user_id_1 = user_1["results"]["id"]
             self.user_id_2 = user_2["results"]["id"]
+
+            client.login(self.admin_email, self.admin_password)
 
             client.add_user_to_group(self.user_id_1, self.group_id_1)
             client.add_user_to_group(self.user_id_2, self.group_id_2)

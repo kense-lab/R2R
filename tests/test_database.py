@@ -128,18 +128,38 @@ def test_search_with_filters(request, db_fixture):
 
 
 @pytest.mark.parametrize("db_fixture", ["pg_vector_db"])
-def test_delete_by_metadata(request, db_fixture):
+def test_delete_vectors(request, db_fixture):
     db = request.getfixturevalue(db_fixture)
     for entry in sample_entries:
         db.vector.upsert(entry)
 
     key_to_delete = sample_entries[0].metadata["key"]
-    db.vector.delete_by_metadata(
+
+    # Print results before deletion
+    results_before = db.vector.search(
+        query_vector=sample_entries[0].vector.data
+    )
+    print(
+        "Results before deletion:",
+        [result.metadata["key"] for result in results_before],
+    )
+
+    db.vector.delete_vectors(
         metadata_fields=["key"], metadata_values=[key_to_delete]
     )
 
-    results = db.vector.search(query_vector=sample_entries[0].vector.data)
-    assert all(result.metadata["key"] != key_to_delete for result in results)
+    # Print results after deletion
+    results_after = db.vector.search(
+        query_vector=sample_entries[0].vector.data
+    )
+    print(
+        "Results after deletion:",
+        [result.metadata["key"] for result in results_after],
+    )
+
+    assert all(
+        result.metadata["key"] != key_to_delete for result in results_after
+    )
 
 
 @pytest.mark.parametrize("db_fixture", ["pg_vector_db"])
