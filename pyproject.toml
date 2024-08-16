@@ -3,7 +3,7 @@ requires = ["poetry-core", "setuptools", "wheel"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
-name = "r2r"
+name = "kense_r2r"
 version = "0.2.85"
 description = "SciPhi R2R"
 authors = ["Owen Colegrove <owen@sciphi.ai>"]
@@ -91,7 +91,7 @@ pytest-cov = "^5.0.0"
 colorama = "^0.4.6"
 
 [tool.poetry.scripts]
-r2r = "r2r.cli.cli:main"
+r2r = "kense_r2r.cli.cli:main"
 
 [tool.black]
 line-length = 79
