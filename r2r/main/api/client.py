@@ -3,7 +3,7 @@ import json
 import os
 import uuid
 from contextlib import ExitStack
-from typing import Any, AsyncGenerator, Dict, Generator, Optional, Union
+from typing import AsyncGenerator, Generator, Optional, Union
 
 import fire
 import httpx
@@ -12,38 +12,20 @@ import requests
 from fastapi.testclient import TestClient
 
 from r2r.base import (
-    AnalysisTypes,
     ChunkingConfig,
-    FilterCriteria,
     GenerationConfig,
     KGSearchSettings,
     R2RException,
-    UserCreate,
+    VectorDBFilterValue,
     VectorSearchSettings,
 )
 
-from .routes.ingestion.requests import (
-    R2RIngestFilesRequest,
-    R2RUpdateFilesRequest,
-)
-from .routes.management.requests import (
-    R2RAnalyticsRequest,
-    R2RDeleteRequest,
-    R2RDocumentChunksRequest,
-    R2RDocumentsOverviewRequest,
-    R2RLogsRequest,
-    R2RPrintRelationshipsRequest,
-    R2RScoreCompletionRequest,
-    R2RUpdatePromptRequest,
-    R2RUsersOverviewRequest,
-)
-from .routes.retrieval.requests import (
-    R2RAgentRequest,
-    R2RRAGRequest,
-    R2RSearchRequest,
-)
-
 nest_asyncio.apply()
+
+
+# The empty args become necessary after a recent modification to `base_endpoint`
+# TODO - Remove the explicitly empty args
+EMPTY_ARGS = {"args": "", "kwargs": "{}"}
 
 
 def handle_request_error(response):
@@ -62,6 +44,33 @@ def handle_request_error(response):
             message = str(error_content)
     except json.JSONDecodeError:
         message = response.text
+
+    raise R2RException(
+        status_code=response.status_code,
+        message=message,
+    )
+
+
+async def handle_request_error_async(response):
+    if response.status_code < 400:
+        return
+
+    try:
+        if response.headers.get("content-type") == "application/json":
+            error_content = await response.json()
+        else:
+            error_content = await response.text()
+
+        if isinstance(error_content, dict) and "detail" in error_content:
+            detail = error_content["detail"]
+            if isinstance(detail, dict):
+                message = detail.get("message", str(error_content))
+            else:
+                message = str(detail)
+        else:
+            message = str(error_content)
+    except Exception:
+        message = await response.text()
 
     raise R2RException(
         status_code=response.status_code,
@@ -93,13 +102,18 @@ class R2RClient:
             "verify_email",
         ]:
             headers.update(self._get_auth_header())
+        params = kwargs.pop("params", {})
+        params = {
+            **params,
+            **EMPTY_ARGS,
+        }  # TODO - Why do we need the empty args?
         if isinstance(self.client, TestClient):
             response = getattr(self.client, method.lower())(
-                url, headers=headers, **kwargs
+                url, headers=headers, **kwargs, params=params
             )
         else:
             response = self.client.request(
-                method, url, headers=headers, **kwargs
+                method, url, headers=headers, **kwargs, params=params
             )
 
         handle_request_error(response)
@@ -111,8 +125,8 @@ class R2RClient:
         return {"Authorization": f"Bearer {self.access_token}"}
 
     def register(self, email: str, password: str) -> dict:
-        user = UserCreate(email=email, password=password)
-        return self._make_request("POST", "register", json=user.dict())
+        user = {"email": email, "password": password}
+        return self._make_request("POST", "register", json=user)
 
     def verify_email(self, verification_code: str) -> dict:
         return self._make_request("POST", f"verify_email/{verification_code}")
@@ -160,11 +174,11 @@ class R2RClient:
         input_types: Optional[dict] = None,
     ) -> dict:
         self._ensure_authenticated()
-        request = R2RUpdatePromptRequest(
-            name=name, template=template, input_types=input_types
-        )
+        data = {"name": name, "template": template, "input_types": input_types}
         return self._make_request(
-            "POST", "update_prompt", json=json.loads(request.model_dump_json())
+            "POST",
+            "update_prompt",
+            json={k: v for k, v in data.items() if v is not None},
         )
 
     def ingest_files(
@@ -178,12 +192,9 @@ class R2RClient:
         self._ensure_authenticated()
 
         if isinstance(chunking_config_override, ChunkingConfig):
-            chunking_config_override = json.loads(
-                chunking_config_override.model_dump_json()
-            )
+            chunking_config_override = chunking_config_override.model_dump()
 
         all_file_paths = []
-
         for path in file_paths:
             if os.path.isdir(path):
                 for root, _, files in os.walk(path):
@@ -193,38 +204,37 @@ class R2RClient:
             else:
                 all_file_paths.append(path)
 
-        files_to_upload = [
-            (
-                "files",
+        with ExitStack() as stack:
+            files = [
                 (
-                    os.path.basename(file),
-                    open(file, "rb"),
-                    "application/octet-stream",
+                    "files",
+                    (
+                        os.path.basename(file),
+                        stack.enter_context(open(file, "rb")),
+                        "application/octet-stream",
+                    ),
+                )
+                for file in all_file_paths
+            ]
+
+            data = {
+                "metadatas": json.dumps(metadatas) if metadatas else None,
+                "document_ids": (
+                    json.dumps([str(doc_id) for doc_id in document_ids])
+                    if document_ids
+                    else None
                 ),
-            )
-            for file in all_file_paths
-        ]
-        request = R2RIngestFilesRequest(
-            metadatas=metadatas,
-            document_ids=(
-                [str(ele) for ele in document_ids] if document_ids else None
-            ),
-            versions=versions,
-            chunking_config_override=chunking_config_override,
-        )
-        try:
+                "versions": json.dumps(versions) if versions else None,
+                "chunking_config_override": (
+                    json.dumps(chunking_config_override)
+                    if chunking_config_override
+                    else None
+                ),
+            }
+
             return self._make_request(
-                "POST",
-                "ingest_files",
-                data={
-                    k: json.dumps(v)
-                    for k, v in json.loads(request.model_dump_json()).items()
-                },
-                files=files_to_upload,
+                "POST", "ingest_files", data=data, files=files
             )
-        finally:
-            for _, file_tuple in files_to_upload:
-                file_tuple[1].close()
 
     def update_files(
         self,
@@ -235,30 +245,36 @@ class R2RClient:
     ) -> dict:
         self._ensure_authenticated()
 
-        request = R2RUpdateFilesRequest(
-            metadatas=metadatas,
-            document_ids=document_ids,
-            chunking_config_override=chunking_config_override,
-        )
+        if isinstance(chunking_config_override, ChunkingConfig):
+            chunking_config_override = chunking_config_override.model_dump()
+
         with ExitStack() as stack:
-            return self._make_request(
-                "POST",
-                "update_files",
-                data={
-                    k: json.dumps(v)
-                    for k, v in json.loads(request.model_dump_json()).items()
-                },
-                files=[
+            files = [
+                (
+                    "files",
                     (
-                        "files",
-                        (
-                            path.split("/")[-1],
-                            stack.enter_context(open(path, "rb")),
-                            "application/octet-stream",
-                        ),
-                    )
-                    for path in file_paths
-                ],
+                        os.path.basename(path),
+                        stack.enter_context(open(path, "rb")),
+                        "application/octet-stream",
+                    ),
+                )
+                for path in file_paths
+            ]
+
+            data = {
+                "document_ids": json.dumps(
+                    [str(doc_id) for doc_id in document_ids]
+                ),
+                "metadatas": json.dumps(metadatas) if metadatas else None,
+                "chunking_config_override": (
+                    json.dumps(chunking_config_override)
+                    if chunking_config_override
+                    else None
+                ),
+            }
+
+            return self._make_request(
+                "POST", "update_files", data=data, files=files
             )
 
     def search(
@@ -270,27 +286,23 @@ class R2RClient:
         kg_search_settings: Optional[Union[dict, KGSearchSettings]] = None,
     ) -> dict:
         self._ensure_authenticated()
-        if vector_search_settings and isinstance(
-            vector_search_settings, VectorSearchSettings
-        ):
-            vector_search_settings = json.loads(
-                vector_search_settings.model_dump_json()
-            )
-        if kg_search_settings and isinstance(
-            kg_search_settings, KGSearchSettings
-        ):
-            kg_search_settings = json.loads(
-                kg_search_settings.model_dump_json()
-            )
 
-        request = R2RSearchRequest(
-            query=query,
-            vector_search_settings=vector_search_settings,
-            kg_search_settings=kg_search_settings,
-        )
-        return self._make_request(
-            "POST", "search", json=json.loads(request.model_dump_json())
-        )
+        # Convert Pydantic models to dictionaries if necessary
+        if isinstance(vector_search_settings, VectorSearchSettings):
+            vector_search_settings = vector_search_settings.model_dump()
+        if isinstance(kg_search_settings, KGSearchSettings):
+            kg_search_settings = kg_search_settings.model_dump()
+
+        # Prepare the JSON payload
+        json_data = {
+            "query": query,
+            "vector_search_settings": vector_search_settings,
+            "kg_search_settings": kg_search_settings,
+        }
+
+        # Remove None values
+        json_data = {k: v for k, v in json_data.items() if v is not None}
+        return self._make_request("POST", "search", json=json_data)
 
     def rag(
         self,
@@ -301,64 +313,52 @@ class R2RClient:
         kg_search_settings: Optional[Union[dict, KGSearchSettings]] = None,
         rag_generation_config: Optional[Union[dict, GenerationConfig]] = None,
         task_prompt_override: Optional[str] = None,
-        include_title_if_available: Optional[bool] = None,
     ) -> dict:
         self._ensure_authenticated()
 
+        # Convert Pydantic models to dictionaries if necessary
         if isinstance(vector_search_settings, VectorSearchSettings):
-            vector_search_settings = json.loads(
-                vector_search_settings.model_dump_json()
-            )
+            vector_search_settings = vector_search_settings.model_dump()
         if isinstance(kg_search_settings, KGSearchSettings):
-            kg_search_settings = json.loads(
-                kg_search_settings.model_dump_json()
-            )
+            kg_search_settings = kg_search_settings.model_dump()
         if isinstance(rag_generation_config, GenerationConfig):
-            rag_generation_config = json.loads(
-                rag_generation_config.model_dump_json()
-            )
+            rag_generation_config = rag_generation_config.model_dump()
 
-        request = R2RRAGRequest(
-            query=query,
-            vector_search_settings=vector_search_settings,
-            kg_search_settings=kg_search_settings,
-            rag_generation_config=rag_generation_config or {"stream": False},
-            task_prompt_override=task_prompt_override,
-            include_title_if_available=include_title_if_available,
-        )
-        print("request = ", request)
+        # Prepare the JSON payload
+        json_data = {
+            "query": query,
+            "vector_search_settings": vector_search_settings,
+            "kg_search_settings": kg_search_settings,
+            "rag_generation_config": rag_generation_config,
+            "task_prompt_override": task_prompt_override,
+        }
+
+        # Remove None values
+        json_data = {k: v for k, v in json_data.items() if v is not None}
 
         if rag_generation_config and rag_generation_config.get(
             "stream", False
         ):
-            return self._stream_rag_sync(request)
+            return self._stream_rag_sync(json_data)
         else:
-            return self._make_request(
-                "POST", "rag", json=json.loads(request.model_dump_json())
-            )
+            return self._make_request("POST", "rag", json=json_data)
 
-    async def _stream_rag(
-        self, rag_request: R2RRAGRequest
-    ) -> AsyncGenerator[str, None]:
+    async def _stream_rag(self, rag_data: dict) -> AsyncGenerator[str, None]:
         url = f"{self.base_url}{self.prefix}/rag"
         async with httpx.AsyncClient() as client:
             async with client.stream(
                 "POST",
                 url,
-                json=json.loads(
-                    rag_request.model_dump_json(),
-                ),
+                json=rag_data,
                 timeout=self.timeout,
             ) as response:
-                handle_request_error(response)
+                await handle_request_error_async(response)
                 async for chunk in response.aiter_text():
                     yield chunk
 
-    def _stream_rag_sync(
-        self, rag_request: R2RRAGRequest
-    ) -> Generator[str, None, None]:
+    def _stream_rag_sync(self, rag_data: dict) -> Generator[str, None, None]:
         async def run_async_generator():
-            async for chunk in self._stream_rag(rag_request):
+            async for chunk in self._stream_rag(rag_data):
                 yield chunk
 
         loop = asyncio.new_event_loop()
@@ -383,60 +383,58 @@ class R2RClient:
         kg_search_settings: Optional[Union[dict, KGSearchSettings]] = None,
         rag_generation_config: Optional[Union[dict, GenerationConfig]] = None,
         task_prompt_override: Optional[str] = None,
+        include_title_if_available: Optional[bool] = True,
     ) -> dict:
         self._ensure_authenticated()
 
+        # Convert Pydantic models to dictionaries if necessary
         if isinstance(vector_search_settings, VectorSearchSettings):
-            vector_search_settings = json.loads(
-                vector_search_settings.model_dump_json()
-            )
+            vector_search_settings = vector_search_settings.model_dump()
         if isinstance(kg_search_settings, KGSearchSettings):
-            kg_search_settings = json.loads(
-                kg_search_settings.model_dump_json()
-            )
+            kg_search_settings = kg_search_settings.model_dump()
         if isinstance(rag_generation_config, GenerationConfig):
-            rag_generation_config = json.loads(
-                rag_generation_config.model_dump_json()
-            )
-        request = R2RAgentRequest(
-            messages=messages,
-            vector_search_settings=vector_search_settings,
-            kg_search_settings=kg_search_settings,
-            rag_generation_config=rag_generation_config,
-            task_prompt_override=task_prompt_override,
-        )
+            rag_generation_config = rag_generation_config.model_dump()
+
+        # Prepare the JSON payload
+        json_data = {
+            "messages": messages,
+            "vector_search_settings": vector_search_settings,
+            "kg_search_settings": kg_search_settings,
+            "rag_generation_config": rag_generation_config,
+            "task_prompt_override": task_prompt_override,
+            "include_title_if_available": include_title_if_available,
+        }
+
+        # Remove None values
+        json_data = {k: v for k, v in json_data.items() if v is not None}
 
         if rag_generation_config and rag_generation_config.get(
             "stream", False
         ):
-            return self._stream_agent_sync(request)
+            return self._stream_agent_sync(json_data)
         else:
-            return self._make_request(
-                "POST", "agent", json=json.loads(request.model_dump_json())
-            )
+            return self._make_request("POST", "agent", json=json_data)
 
     async def _stream_agent(
-        self, rag_agent_request: R2RAgentRequest
+        self, agent_data: dict
     ) -> AsyncGenerator[str, None]:
         url = f"{self.base_url}{self.prefix}/agent"
         async with httpx.AsyncClient() as client:
             async with client.stream(
                 "POST",
                 url,
-                json=json.loads(
-                    rag_agent_request.model_dump_json(),
-                ),
+                json=agent_data,
                 timeout=self.timeout,
             ) as response:
-                handle_request_error(response)
+                await handle_request_error(response)
                 async for chunk in response.aiter_text():
                     yield chunk
 
     def _stream_agent_sync(
-        self, rag_agent_request: R2RAgentRequest
+        self, agent_data: dict
     ) -> Generator[str, None, None]:
         async def run_async_generator():
-            async for chunk in self._stream_agent(rag_agent_request):
+            async for chunk in self._stream_agent(agent_data):
                 yield chunk
 
         loop = asyncio.new_event_loop()
@@ -453,29 +451,30 @@ class R2RClient:
             loop.close()
 
     def delete(
-        self, keys: list[str], values: list[Union[bool, int, str]]
+        self, filters: Optional[dict[str, VectorDBFilterValue]] = None
     ) -> dict:
         self._ensure_authenticated()
 
-        request = R2RDeleteRequest(keys=keys, values=values)
+        params = {"filters": json.dumps(filters)} if filters else {}
+
         return self._make_request(
-            "DELETE", "delete", json=json.loads(request.model_dump_json())
+            "DELETE",
+            "delete",
+            params=params,
         )
 
     def logs(
         self,
-        log_type_filter: Optional[str] = None,
+        run_type_filter: Optional[str] = None,
         max_runs: int = 100,
     ) -> dict:
         self._ensure_authenticated()
 
-        request = R2RLogsRequest(
-            log_type_filter=log_type_filter,
-            max_runs_requested=max_runs,
-        )
-        return self._make_request(
-            "GET", "logs", json=json.loads(request.model_dump_json())
-        )
+        params = {
+            "run_type_filter": run_type_filter,
+            "max_runs": max_runs,
+        }
+        return self._make_request("GET", "logs", params=params)
 
     def app_settings(self) -> dict:
         self._ensure_authenticated()
@@ -484,87 +483,82 @@ class R2RClient:
 
     def score_completion(
         self,
-        message_id: str = None,
-        score: float = None,
+        message_id: uuid.UUID,
+        score: float,
     ) -> dict:
         self._ensure_authenticated()
-
-        request = R2RScoreCompletionRequest(
-            message_id=message_id,
-            score=score,
-        )
+        data = {
+            "message_id": str(message_id),
+            "score": score,
+        }
         return self._make_request(
             "POST",
             "score_completion",
-            json=json.loads(request.model_dump_json()),
+            json=data,
         )
 
     def analytics(
         self,
-        filter_criteria: Optional[Dict[str, Any]],
-        analysis_types: Optional[Dict[str, Any]],
+        filter_criteria: Optional[Union[dict, str]] = None,
+        analysis_types: Optional[Union[dict, str]] = None,
     ) -> dict:
         self._ensure_authenticated()
 
-        request = R2RAnalyticsRequest(
-            filter_criteria=FilterCriteria(filters=filter_criteria),
-            analysis_types=AnalysisTypes(analysis_types=analysis_types),
-        )
-        return self._make_request(
-            "GET", "analytics", json=request.model_dump(exclude_none=True)
-        )
+        params = {}
+        if filter_criteria:
+            if isinstance(filter_criteria, dict):
+                params["filter_criteria"] = json.dumps(filter_criteria)
+            else:
+                params["filter_criteria"] = filter_criteria
+        if analysis_types:
+            if isinstance(analysis_types, dict):
+                params["analysis_types"] = json.dumps(analysis_types)
+            else:
+                params["analysis_types"] = analysis_types
+
+        return self._make_request("GET", "analytics", params=params)
 
     def users_overview(
         self, user_ids: Optional[list[uuid.UUID]] = None
     ) -> dict:
         self._ensure_authenticated()
 
-        request = R2RUsersOverviewRequest(user_ids=user_ids)
         return self._make_request(
-            "GET", "users_overview", json=json.loads(request.model_dump_json())
+            "GET", "users_overview", params={"user_ids": user_ids}
         )
 
     def documents_overview(
         self,
         document_ids: Optional[list[str]] = None,
-        user_ids: Optional[list[str]] = None,
     ) -> dict:
         self._ensure_authenticated()
 
-        request = R2RDocumentsOverviewRequest(
-            document_ids=(
-                [uuid.UUID(did) for did in document_ids]
-                if document_ids
-                else None
-            ),
-            user_ids=(
-                [uuid.UUID(uid) for uid in user_ids] if user_ids else None
-            ),
-        )
         return self._make_request(
             "GET",
             "documents_overview",
-            json=json.loads(request.model_dump_json()),
+            params={
+                "document_ids": (
+                    [str(ele) for ele in document_ids]
+                    if document_ids
+                    else None
+                )
+            },
         )
 
     def document_chunks(self, document_id: str) -> dict:
         self._ensure_authenticated()
 
-        request = R2RDocumentChunksRequest(document_id=document_id)
         return self._make_request(
-            "GET",
-            "document_chunks",
-            json=json.loads(request.model_dump_json()),
+            "GET", "document_chunks", params={"document_id": document_id}
         )
 
     def inspect_knowledge_graph(self, limit: int = 100) -> str:
         self._ensure_authenticated()
 
-        request = R2RPrintRelationshipsRequest(limit=limit)
         return self._make_request(
-            "POST",
+            "GET",
             "inspect_knowledge_graph",
-            json=json.loads(request.model_dump_json()),
+            params={"limit": limit},
         )
 
     def change_password(
@@ -582,7 +576,10 @@ class R2RClient:
 
     def request_password_reset(self, email: str) -> dict:
         return self._make_request(
-            "POST", "request_password_reset", json={"email": email}
+            "POST",
+            "request_password_reset",
+            data=email,
+            headers={"Content-Type": "text/plain"},
         )
 
     def confirm_password_reset(
@@ -591,7 +588,8 @@ class R2RClient:
         return self._make_request(
             "POST",
             f"reset_password/{reset_token}",
-            json={"new_password": new_password},
+            data=new_password,
+            headers={"Content-Type": "text/plain"},
         )
 
     def logout(self) -> dict:
@@ -601,18 +599,99 @@ class R2RClient:
         self._refresh_token = None
         return response
 
-    def update_user(self, user_data: dict) -> dict:
-        self._ensure_authenticated()
+    def update_user(
+        self,
+        email: Optional[str] = None,
+        name: Optional[str] = None,
+        bio: Optional[str] = None,
+        profile_picture: Optional[str] = None,
+    ) -> dict:
+        user_data = {
+            "email": email,
+            "name": name,
+            "bio": bio,
+            "profile_picture": profile_picture,
+        }
+        user_data = {k: v for k, v in user_data.items() if v is not None}
         return self._make_request("PUT", "user", json=user_data)
 
-    def delete_user(self, password: str) -> dict:
+    def delete_user(self, user_id: str, password: str) -> dict:
         self._ensure_authenticated()
         response = self._make_request(
-            "DELETE", "user", json={"password": password}
+            "DELETE", "user", json={"user_id": user_id, "password": password}
         )
         self.access_token = None
         self._refresh_token = None
         return response
+
+    def get_group(self, group_id: uuid.UUID) -> dict:
+        self._ensure_authenticated()
+        return self._make_request("GET", f"get_group/{group_id}")
+
+    def create_group(self, name: str, description: str = "") -> dict:
+        self._ensure_authenticated()
+        data = {"name": name, "description": description}
+        return self._make_request("POST", "create_group", json=data)
+
+    def update_group(
+        self,
+        group_id: uuid.UUID,
+        name: Optional[str] = None,
+        description: Optional[str] = None,
+    ) -> dict:
+        self._ensure_authenticated()
+        data = {
+            "name": name,
+            "description": description,
+            "group_id": str(group_id),
+        }
+        data = {k: v for k, v in data.items() if v is not None}
+        return self._make_request("PUT", f"update_group", json=data)
+
+    def add_user_to_group(
+        self, user_id: uuid.UUID, group_id: uuid.UUID
+    ) -> dict:
+        self._ensure_authenticated()
+        data = {"user_id": str(user_id), "group_id": str(group_id)}
+        return self._make_request("POST", "add_user_to_group", json=data)
+
+    def remove_user_from_group(
+        self, user_id: uuid.UUID, group_id: uuid.UUID
+    ) -> dict:
+        self._ensure_authenticated()
+        data = {"user_id": str(user_id), "group_id": str(group_id)}
+        return self._make_request("POST", "remove_user_from_group", json=data)
+
+    def delete_group(self, group_id: uuid.UUID) -> dict:
+        self._ensure_authenticated()
+        return self._make_request("DELETE", f"delete_group/{group_id}")
+
+    def list_groups(self, offset: int = 0, limit: int = 100) -> dict:
+        self._ensure_authenticated()
+        return self._make_request(
+            "GET", f"list_groups?offset={offset}&limit={limit}"
+        )
+
+    def get_users_in_group(
+        self, group_id: uuid.UUID, offset: int = 0, limit: int = 100
+    ) -> dict:
+        self._ensure_authenticated()
+        return self._make_request(
+            "GET",
+            f"get_users_in_group/{group_id}/{offset}/{limit}",
+        )
+
+    def get_groups_for_user(self, user_id: uuid.UUID) -> dict:
+        return self._make_request("GET", f"get_groups_for_user/{user_id}")
+
+    def groups_overview(
+        self, group_ids: Optional[list[uuid.UUID]] = None
+    ) -> dict:
+        self._ensure_authenticated()
+        params = {}
+        if group_ids:
+            params["group_ids"] = [str(gid) for gid in group_ids]
+        return self._make_request("GET", "groups_overview", params=params)
 
 
 if __name__ == "__main__":
